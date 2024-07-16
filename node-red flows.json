@@ -1,0 +1,1698 @@
+[
+    {
+        "id": "b4f44bd45c851470",
+        "type": "tab",
+        "label": "Test headset",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5f0c638b67c035fd",
+        "type": "tab",
+        "label": "Test Emotiv to Node-RED",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "418ae4db17aaa27d",
+        "type": "tab",
+        "label": "Test Node-RED to ROS",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "912b42b3010b057f",
+        "type": "tab",
+        "label": "Test 2 MC + neutral",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e1f01e5e.1a3c4",
+        "type": "tab",
+        "label": "Emotiv BCI to ROS",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c5dd982f3c504e29",
+        "type": "group",
+        "z": "e1f01e5e.1a3c4",
+        "name": "Emotiv Headset and Profile Connection",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "label-position": "n",
+            "stroke": "#EBA4C0",
+            "fill": "#EBA4C0",
+            "fill-opacity": "0.25"
+        },
+        "nodes": [
+            "774ce4d1f3e8a634",
+            "a8843dbef2e06a37"
+        ],
+        "x": 14,
+        "y": 359,
+        "w": 392,
+        "h": 82
+    },
+    {
+        "id": "ce1a6da7223e9e9f",
+        "type": "group",
+        "z": "e1f01e5e.1a3c4",
+        "name": "Motion Sensors Processing",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000",
+            "fill": "#ffC000",
+            "fill-opacity": "0.25",
+            "stroke": "#ffC000"
+        },
+        "nodes": [
+            "22dab8c17a93af33",
+            "7bb91a18e553130d",
+            "e26e1b45f6eea9cf",
+            "abfc75f5871e89d6",
+            "9cf91f38d96b8676",
+            "3cf25f8a90e93270",
+            "46223d2415881e5c",
+            "a1548fb2acddbb7b",
+            "7c0bad96c5b8d65a"
+        ],
+        "x": 734,
+        "y": 419,
+        "w": 392,
+        "h": 322
+    },
+    {
+        "id": "2078d95306bd476a",
+        "type": "group",
+        "z": "e1f01e5e.1a3c4",
+        "name": "Mental Commands",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "label-position": "n",
+            "stroke": "#EBA4C0",
+            "fill": "#EBA4C0",
+            "fill-opacity": "0.25"
+        },
+        "nodes": [
+            "e0ce477a9112debc",
+            "0c9eb6bc16bf9262",
+            "3e86151e432194bb",
+            "8a15a68a43768c21",
+            "265955259ed79492",
+            "0b2881b0e92765b1"
+        ],
+        "x": 454,
+        "y": 99,
+        "w": 242,
+        "h": 242
+    },
+    {
+        "id": "a12fd97fea4d5139",
+        "type": "group",
+        "z": "e1f01e5e.1a3c4",
+        "name": "Motion Sensors",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "label-position": "n",
+            "stroke": "#EBA4C0",
+            "fill": "#EBA4C0",
+            "fill-opacity": "0.25"
+        },
+        "nodes": [
+            "ce1781b3f9785571",
+            "cd0938c71b767828",
+            "78b75d1a175ab203"
+        ],
+        "x": 454,
+        "y": 479,
+        "w": 252,
+        "h": 202
+    },
+    {
+        "id": "f1b3f5e90605bca8",
+        "type": "group",
+        "z": "e1f01e5e.1a3c4",
+        "name": "Dashboard",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "label-position": "n",
+            "stroke": "#77C6CC",
+            "fill": "#77C6CC",
+            "fill-opacity": "0.25"
+        },
+        "nodes": [
+            "3e66fb647057c9e6",
+            "d4736b16c8c4a330",
+            "0f249d7105031e60",
+            "4026fb70644dbb38",
+            "ee6ed693bcd8230d",
+            "d8c79e62c8076229"
+        ],
+        "x": 1184,
+        "y": 139,
+        "w": 222,
+        "h": 162
+    },
+    {
+        "id": "71dedeec6942bbbe",
+        "type": "group",
+        "z": "e1f01e5e.1a3c4",
+        "name": "Flask Server",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "label-position": "n",
+            "stroke": "#E7E7AE",
+            "fill": "#E7E7AE",
+            "fill-opacity": "0.25"
+        },
+        "nodes": [
+            "250d384043f5a0b6",
+            "1973c89e3a71695c",
+            "8c13823e944e5c04",
+            "a2d3cab7263eb7e7",
+            "510c8d47890ee1c0",
+            "ab8c5ab7fce22595",
+            "e1b43a5f8c226455",
+            "33351957ffbdbf20",
+            "b0a745e0549fa80c"
+        ],
+        "x": 724,
+        "y": 59,
+        "w": 432,
+        "h": 322
+    },
+    {
+        "id": "fea83661.1ab498",
+        "type": "ui_group",
+        "name": "Neutral",
+        "tab": "d7908651.24f9b8",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d7908651.24f9b8",
+        "type": "ui_tab",
+        "name": "Mental commands dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "57c02932d38262de",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 48,
+                "gy": 48,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d2c016d14e5c737a",
+        "type": "ui_group",
+        "name": "Action 1",
+        "tab": "d7908651.24f9b8",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0d817445ad09d4c5",
+        "type": "ui_group",
+        "name": "Action 2",
+        "tab": "d7908651.24f9b8",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cccbe731d0e3b55d",
+        "type": "ui_group",
+        "name": "Testing",
+        "tab": "d7908651.24f9b8",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "303f9d115b69dfed",
+        "type": "EMOTIV",
+        "z": "b4f44bd45c851470",
+        "name": "EMOTIV",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "e7f38b75748cede7",
+                "b1842467b7ef06ad",
+                "ffdc18c171a2e696",
+                "acb73d324c82b130",
+                "d29baa57b252f15f"
+            ]
+        ]
+    },
+    {
+        "id": "e7f38b75748cede7",
+        "type": "Frequency-Band-Power",
+        "z": "b4f44bd45c851470",
+        "name": "Frequency Band Powers",
+        "freq": 0,
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 410,
+        "y": 60,
+        "wires": [
+            [
+                "0824c17015f20fe5"
+            ]
+        ]
+    },
+    {
+        "id": "0824c17015f20fe5",
+        "type": "debug",
+        "z": "b4f44bd45c851470",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b1842467b7ef06ad",
+        "type": "Frequency-Band-Power",
+        "z": "b4f44bd45c851470",
+        "name": "Frequency Band Powers",
+        "freq": "1",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "fc31cabad98c0cf3"
+            ]
+        ]
+    },
+    {
+        "id": "ffdc18c171a2e696",
+        "type": "Frequency-Band-Power",
+        "z": "b4f44bd45c851470",
+        "name": "Frequency Band Powers",
+        "freq": "2",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "75c0ddbc8cae8936"
+            ]
+        ]
+    },
+    {
+        "id": "acb73d324c82b130",
+        "type": "Frequency-Band-Power",
+        "z": "b4f44bd45c851470",
+        "name": "Frequency Band Powers",
+        "freq": "3",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 420,
+        "y": 240,
+        "wires": [
+            [
+                "956211c067e6a661"
+            ]
+        ]
+    },
+    {
+        "id": "d29baa57b252f15f",
+        "type": "Frequency-Band-Power",
+        "z": "b4f44bd45c851470",
+        "name": "Frequency Band Powers",
+        "freq": "4",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "dc8edcd0c0032901"
+            ]
+        ]
+    },
+    {
+        "id": "fc31cabad98c0cf3",
+        "type": "debug",
+        "z": "b4f44bd45c851470",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "75c0ddbc8cae8936",
+        "type": "debug",
+        "z": "b4f44bd45c851470",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "956211c067e6a661",
+        "type": "debug",
+        "z": "b4f44bd45c851470",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "dc8edcd0c0032901",
+        "type": "debug",
+        "z": "b4f44bd45c851470",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d769a70a.980b78",
+        "type": "function",
+        "z": "5f0c638b67c035fd",
+        "name": "Yes - Threshold 60",
+        "func": "var spoken = context.get('spoken') || false;\nvar threshold = 60;\nvar outString = \"yes\";\nvar outMsg = {payload: \"\", text : outString};\n\nif (!spoken) {\n    if (msg.payload >= threshold) {\n        outMsg.payload = outString;\n        spoken = true;\n    }\n}\n\nif (msg.payload < threshold) {\n    spoken = false;\n    outMsg.text = \"\";\n}\n\nconsole.log(outMsg);\n\ncontext.set('spoken', spoken);\nreturn outMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 60,
+        "wires": [
+            [
+                "44c939c1.e4e3a8",
+                "622d1a57.250b94"
+            ]
+        ]
+    },
+    {
+        "id": "33afa9c9.511c76",
+        "type": "function",
+        "z": "5f0c638b67c035fd",
+        "name": "No - Threshold 60",
+        "func": "var spoken = context.get('spoken') || false;\nvar threshold = 60;\nvar outString = \"no\";\nvar outMsg = {payload: \"\", text : outString};\n\nif (!spoken) {\n    if (msg.payload >= threshold) {\n        outMsg.payload = outString;\n        spoken = true;\n    }\n}\n\nif (msg.payload < threshold) {\n    spoken = false;\n    outMsg.text = \"\";\n}\n\ncontext.set('spoken', spoken);\nreturn outMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 140,
+        "wires": [
+            [
+                "44c939c1.e4e3a8",
+                "622d1a57.250b94"
+            ]
+        ]
+    },
+    {
+        "id": "44c939c1.e4e3a8",
+        "type": "ui_text",
+        "z": "5f0c638b67c035fd",
+        "group": "cccbe731d0e3b55d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Text Response",
+        "format": "{{msg.text}}",
+        "layout": "row-spread",
+        "x": 880,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "622d1a57.250b94",
+        "type": "ui_audio",
+        "z": "5f0c638b67c035fd",
+        "name": "Voice Response",
+        "group": "cccbe731d0e3b55d",
+        "voice": "en-US",
+        "always": "",
+        "x": 880,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7a2816bd.f70c08",
+        "type": "EMOTIV",
+        "z": "5f0c638b67c035fd",
+        "name": "EMOTIV",
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "d82d6a78.fff4f8"
+            ]
+        ]
+    },
+    {
+        "id": "d82d6a78.fff4f8",
+        "type": "Profile-Name",
+        "z": "5f0c638b67c035fd",
+        "name": "Profile Name",
+        "profileName": "",
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "6af191cb.71c66",
+                "d309717a.21006"
+            ]
+        ]
+    },
+    {
+        "id": "6af191cb.71c66",
+        "type": "Mental-Command",
+        "z": "5f0c638b67c035fd",
+        "name": "Mental Commands",
+        "actionName": "push",
+        "mcSen": "10",
+        "x": 470,
+        "y": 60,
+        "wires": [
+            [
+                "d769a70a.980b78"
+            ]
+        ]
+    },
+    {
+        "id": "d309717a.21006",
+        "type": "Mental-Command",
+        "z": "5f0c638b67c035fd",
+        "name": "Mental Commands",
+        "actionName": "pull",
+        "mcSen": "10",
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "33afa9c9.511c76"
+            ]
+        ]
+    },
+    {
+        "id": "bde227316ba7b98d",
+        "type": "http request",
+        "z": "418ae4db17aaa27d",
+        "name": "Send Neutral Command",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5014/emotiv_input",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 60,
+        "wires": [
+            [
+                "ba5bee814d8c02a5"
+            ]
+        ]
+    },
+    {
+        "id": "1f0981bb92ceb9f7",
+        "type": "http request",
+        "z": "418ae4db17aaa27d",
+        "name": "Send Push Command",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5014/emotiv_open_gripper",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "d37242652296866b"
+            ]
+        ]
+    },
+    {
+        "id": "1dd579487c0296cf",
+        "type": "http request",
+        "z": "418ae4db17aaa27d",
+        "name": "Send Pull Command",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5014/emotiv_close_gripper",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 400,
+        "y": 180,
+        "wires": [
+            [
+                "dcba939103ad5b24"
+            ]
+        ]
+    },
+    {
+        "id": "ba5bee814d8c02a5",
+        "type": "debug",
+        "z": "418ae4db17aaa27d",
+        "name": "Neutral",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d37242652296866b",
+        "type": "debug",
+        "z": "418ae4db17aaa27d",
+        "name": "Push",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "dcba939103ad5b24",
+        "type": "debug",
+        "z": "418ae4db17aaa27d",
+        "name": "Pull",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3943e92b4ad2b5bb",
+        "type": "inject",
+        "z": "418ae4db17aaa27d",
+        "name": "Trigger Neutral Command",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "neutral",
+        "payloadType": "str",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "bde227316ba7b98d"
+            ]
+        ]
+    },
+    {
+        "id": "00d6dbd6d04d8143",
+        "type": "inject",
+        "z": "418ae4db17aaa27d",
+        "name": "Trigger Push Command",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "push",
+        "payloadType": "str",
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "1f0981bb92ceb9f7"
+            ]
+        ]
+    },
+    {
+        "id": "391ff91473b32cb5",
+        "type": "inject",
+        "z": "418ae4db17aaa27d",
+        "name": "Trigger Pull Command",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "pull",
+        "payloadType": "str",
+        "x": 180,
+        "y": 180,
+        "wires": [
+            [
+                "1dd579487c0296cf"
+            ]
+        ]
+    },
+    {
+        "id": "ce7ced7b709a425d",
+        "type": "EMOTIV",
+        "z": "912b42b3010b057f",
+        "name": "EMOTIV",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "d35cb3ee70c08109"
+            ]
+        ]
+    },
+    {
+        "id": "d35cb3ee70c08109",
+        "type": "Profile-Name",
+        "z": "912b42b3010b057f",
+        "name": "Profile Name",
+        "profileName": "1.5 close fists",
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "e3ed6f97ca6db480",
+                "d2591bdff6c78bc5",
+                "24f724b5430b729b"
+            ]
+        ]
+    },
+    {
+        "id": "d2591bdff6c78bc5",
+        "type": "Mental-Command",
+        "z": "912b42b3010b057f",
+        "name": "Mental Commands",
+        "actionName": "neutral",
+        "mcSen": "5",
+        "x": 600,
+        "y": 60,
+        "wires": [
+            [
+                "91eebff92f46124f"
+            ]
+        ]
+    },
+    {
+        "id": "e3ed6f97ca6db480",
+        "type": "Mental-Command",
+        "z": "912b42b3010b057f",
+        "name": "Mental Commands",
+        "actionName": "push",
+        "mcSen": "5",
+        "x": 590,
+        "y": 120,
+        "wires": [
+            [
+                "3b4c0b1be51e8d8b"
+            ]
+        ]
+    },
+    {
+        "id": "24f724b5430b729b",
+        "type": "Mental-Command",
+        "z": "912b42b3010b057f",
+        "name": "Mental Commands",
+        "actionName": "pull",
+        "mcSen": "5",
+        "x": 590,
+        "y": 180,
+        "wires": [
+            [
+                "be06e478ab4e9676"
+            ]
+        ]
+    },
+    {
+        "id": "3b4c0b1be51e8d8b",
+        "type": "ui_gauge",
+        "z": "912b42b3010b057f",
+        "name": "",
+        "group": "d2c016d14e5c737a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Push",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "91eebff92f46124f",
+        "type": "ui_gauge",
+        "z": "912b42b3010b057f",
+        "name": "",
+        "group": "fea83661.1ab498",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Neutral",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 800,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "be06e478ab4e9676",
+        "type": "ui_gauge",
+        "z": "912b42b3010b057f",
+        "name": "",
+        "group": "0d817445ad09d4c5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Pull",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "774ce4d1f3e8a634",
+        "type": "EMOTIV",
+        "z": "e1f01e5e.1a3c4",
+        "g": "c5dd982f3c504e29",
+        "name": "EMOTIV",
+        "x": 100,
+        "y": 400,
+        "wires": [
+            [
+                "a8843dbef2e06a37"
+            ]
+        ]
+    },
+    {
+        "id": "a8843dbef2e06a37",
+        "type": "Profile-Name",
+        "z": "e1f01e5e.1a3c4",
+        "g": "c5dd982f3c504e29",
+        "name": "Profile",
+        "profileName": "gripper control",
+        "x": 280,
+        "y": 400,
+        "wires": [
+            [
+                "e0ce477a9112debc",
+                "0c9eb6bc16bf9262",
+                "3e86151e432194bb",
+                "cd0938c71b767828",
+                "78b75d1a175ab203",
+                "ce1781b3f9785571"
+            ]
+        ]
+    },
+    {
+        "id": "3e66fb647057c9e6",
+        "type": "ui_gauge",
+        "z": "e1f01e5e.1a3c4",
+        "g": "f1b3f5e90605bca8",
+        "name": "",
+        "group": "fea83661.1ab498",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Neutral",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 1320,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "250d384043f5a0b6",
+        "type": "http request",
+        "z": "e1f01e5e.1a3c4",
+        "g": "71dedeec6942bbbe",
+        "name": "Send Neutral Command",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5014/emotiv_input",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1020,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1973c89e3a71695c",
+        "type": "http request",
+        "z": "e1f01e5e.1a3c4",
+        "g": "71dedeec6942bbbe",
+        "name": "Send Push Command",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5014/emotiv/gripper/close",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1010,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c13823e944e5c04",
+        "type": "http request",
+        "z": "e1f01e5e.1a3c4",
+        "g": "71dedeec6942bbbe",
+        "name": "Send Pull Command",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5014/emotiv/gripper/open",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1010,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a2d3cab7263eb7e7",
+        "type": "debug",
+        "z": "e1f01e5e.1a3c4",
+        "g": "71dedeec6942bbbe",
+        "name": "Neutral",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "510c8d47890ee1c0",
+        "type": "debug",
+        "z": "e1f01e5e.1a3c4",
+        "g": "71dedeec6942bbbe",
+        "name": "Push",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ab8c5ab7fce22595",
+        "type": "debug",
+        "z": "e1f01e5e.1a3c4",
+        "g": "71dedeec6942bbbe",
+        "name": "Pull",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e1b43a5f8c226455",
+        "type": "function",
+        "z": "e1f01e5e.1a3c4",
+        "g": "71dedeec6942bbbe",
+        "name": "Neutral msg",
+        "func": "msg.payload = {\n    command: msg.payload,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 120,
+        "wires": [
+            [
+                "250d384043f5a0b6",
+                "a2d3cab7263eb7e7"
+            ]
+        ]
+    },
+    {
+        "id": "33351957ffbdbf20",
+        "type": "function",
+        "z": "e1f01e5e.1a3c4",
+        "g": "71dedeec6942bbbe",
+        "name": "Push msg",
+        "func": "msg.payload = {\n    command: msg.payload,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 220,
+        "wires": [
+            [
+                "1973c89e3a71695c",
+                "510c8d47890ee1c0"
+            ]
+        ]
+    },
+    {
+        "id": "b0a745e0549fa80c",
+        "type": "function",
+        "z": "e1f01e5e.1a3c4",
+        "g": "71dedeec6942bbbe",
+        "name": "Pull msg",
+        "func": "msg.payload = {\n    command: msg.payload,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 320,
+        "wires": [
+            [
+                "8c13823e944e5c04",
+                "ab8c5ab7fce22595"
+            ]
+        ]
+    },
+    {
+        "id": "d4736b16c8c4a330",
+        "type": "ui_gauge",
+        "z": "e1f01e5e.1a3c4",
+        "g": "f1b3f5e90605bca8",
+        "name": "",
+        "group": "d2c016d14e5c737a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Push",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 1310,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0f249d7105031e60",
+        "type": "ui_gauge",
+        "z": "e1f01e5e.1a3c4",
+        "g": "f1b3f5e90605bca8",
+        "name": "",
+        "group": "0d817445ad09d4c5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Pull",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 1310,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "22dab8c17a93af33",
+        "type": "function",
+        "z": "e1f01e5e.1a3c4",
+        "g": "ce1a6da7223e9e9f",
+        "name": "gyrX",
+        "func": "msg.payload = {\n    gyrX: msg.payload,\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 480,
+        "wires": [
+            [
+                "9cf91f38d96b8676",
+                "abfc75f5871e89d6"
+            ]
+        ]
+    },
+    {
+        "id": "e26e1b45f6eea9cf",
+        "type": "function",
+        "z": "e1f01e5e.1a3c4",
+        "g": "ce1a6da7223e9e9f",
+        "name": "gyrZ",
+        "func": "msg.payload = {\n    gyrZ: msg.payload,\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 680,
+        "wires": [
+            [
+                "a1548fb2acddbb7b",
+                "7c0bad96c5b8d65a"
+            ]
+        ]
+    },
+    {
+        "id": "7bb91a18e553130d",
+        "type": "function",
+        "z": "e1f01e5e.1a3c4",
+        "g": "ce1a6da7223e9e9f",
+        "name": "gyrY",
+        "func": "msg.payload = {\n    gyrY: msg.payload,\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 580,
+        "wires": [
+            [
+                "46223d2415881e5c",
+                "3cf25f8a90e93270"
+            ]
+        ]
+    },
+    {
+        "id": "e0ce477a9112debc",
+        "type": "Mental-Command",
+        "z": "e1f01e5e.1a3c4",
+        "g": "2078d95306bd476a",
+        "name": "MC",
+        "actionName": "neutral",
+        "mcSen": "5",
+        "x": 550,
+        "y": 140,
+        "wires": [
+            [
+                "e1b43a5f8c226455",
+                "8a15a68a43768c21"
+            ]
+        ]
+    },
+    {
+        "id": "0c9eb6bc16bf9262",
+        "type": "Mental-Command",
+        "z": "e1f01e5e.1a3c4",
+        "g": "2078d95306bd476a",
+        "name": "MC",
+        "actionName": "push",
+        "mcSen": "5",
+        "x": 540,
+        "y": 220,
+        "wires": [
+            [
+                "33351957ffbdbf20",
+                "265955259ed79492"
+            ]
+        ]
+    },
+    {
+        "id": "3e86151e432194bb",
+        "type": "Mental-Command",
+        "z": "e1f01e5e.1a3c4",
+        "g": "2078d95306bd476a",
+        "name": "MC",
+        "actionName": "pull",
+        "mcSen": "5",
+        "x": 540,
+        "y": 300,
+        "wires": [
+            [
+                "b0a745e0549fa80c",
+                "0b2881b0e92765b1"
+            ]
+        ]
+    },
+    {
+        "id": "cd0938c71b767828",
+        "type": "Motion-Sensor",
+        "z": "e1f01e5e.1a3c4",
+        "g": "a12fd97fea4d5139",
+        "name": "MS",
+        "metric": "1",
+        "x": 580,
+        "y": 580,
+        "wires": [
+            [
+                "7bb91a18e553130d"
+            ]
+        ]
+    },
+    {
+        "id": "78b75d1a175ab203",
+        "type": "Motion-Sensor",
+        "z": "e1f01e5e.1a3c4",
+        "g": "a12fd97fea4d5139",
+        "name": "MS",
+        "metric": "2",
+        "x": 580,
+        "y": 640,
+        "wires": [
+            [
+                "e26e1b45f6eea9cf"
+            ]
+        ]
+    },
+    {
+        "id": "ce1781b3f9785571",
+        "type": "Motion-Sensor",
+        "z": "e1f01e5e.1a3c4",
+        "g": "a12fd97fea4d5139",
+        "name": "MS",
+        "metric": "0",
+        "x": 580,
+        "y": 520,
+        "wires": [
+            [
+                "22dab8c17a93af33"
+            ]
+        ]
+    },
+    {
+        "id": "8a15a68a43768c21",
+        "type": "link out",
+        "z": "e1f01e5e.1a3c4",
+        "g": "2078d95306bd476a",
+        "name": "Dashboard Neutral",
+        "mode": "link",
+        "links": [
+            "4026fb70644dbb38"
+        ],
+        "x": 655,
+        "y": 140,
+        "wires": [],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "4026fb70644dbb38",
+        "type": "link in",
+        "z": "e1f01e5e.1a3c4",
+        "g": "f1b3f5e90605bca8",
+        "name": "Dashboard Neutral",
+        "links": [
+            "8a15a68a43768c21"
+        ],
+        "x": 1225,
+        "y": 180,
+        "wires": [
+            [
+                "3e66fb647057c9e6"
+            ]
+        ],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "265955259ed79492",
+        "type": "link out",
+        "z": "e1f01e5e.1a3c4",
+        "g": "2078d95306bd476a",
+        "name": "Dashboard Push",
+        "mode": "link",
+        "links": [
+            "ee6ed693bcd8230d"
+        ],
+        "x": 655,
+        "y": 220,
+        "wires": [],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "ee6ed693bcd8230d",
+        "type": "link in",
+        "z": "e1f01e5e.1a3c4",
+        "g": "f1b3f5e90605bca8",
+        "name": "Dashboard Push",
+        "links": [
+            "265955259ed79492"
+        ],
+        "x": 1225,
+        "y": 220,
+        "wires": [
+            [
+                "d4736b16c8c4a330"
+            ]
+        ],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "0b2881b0e92765b1",
+        "type": "link out",
+        "z": "e1f01e5e.1a3c4",
+        "g": "2078d95306bd476a",
+        "name": "Dashboard Pull",
+        "mode": "link",
+        "links": [
+            "d8c79e62c8076229"
+        ],
+        "x": 655,
+        "y": 300,
+        "wires": [],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "d8c79e62c8076229",
+        "type": "link in",
+        "z": "e1f01e5e.1a3c4",
+        "g": "f1b3f5e90605bca8",
+        "name": "Dashboard Pull",
+        "links": [
+            "0b2881b0e92765b1"
+        ],
+        "x": 1225,
+        "y": 260,
+        "wires": [
+            [
+                "0f249d7105031e60"
+            ]
+        ],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "abfc75f5871e89d6",
+        "type": "http request",
+        "z": "e1f01e5e.1a3c4",
+        "g": "ce1a6da7223e9e9f",
+        "name": "Send Neutral Command",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5014/emotiv/gyroscope/X",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 990,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9cf91f38d96b8676",
+        "type": "debug",
+        "z": "e1f01e5e.1a3c4",
+        "g": "ce1a6da7223e9e9f",
+        "name": "gyrX",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3cf25f8a90e93270",
+        "type": "http request",
+        "z": "e1f01e5e.1a3c4",
+        "g": "ce1a6da7223e9e9f",
+        "name": "Send Neutral Command",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5014/emotiv/gyroscope/Y",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 990,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46223d2415881e5c",
+        "type": "debug",
+        "z": "e1f01e5e.1a3c4",
+        "g": "ce1a6da7223e9e9f",
+        "name": "gyrY",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "7c0bad96c5b8d65a",
+        "type": "http request",
+        "z": "e1f01e5e.1a3c4",
+        "g": "ce1a6da7223e9e9f",
+        "name": "Send Neutral Command",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5014/emotiv/gyroscope/Z",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 990,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1548fb2acddbb7b",
+        "type": "debug",
+        "z": "e1f01e5e.1a3c4",
+        "g": "ce1a6da7223e9e9f",
+        "name": "gyrZ",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 660,
+        "wires": []
+    }
+]
