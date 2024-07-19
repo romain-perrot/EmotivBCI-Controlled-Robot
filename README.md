@@ -6,7 +6,7 @@
 [Introduction](#introduction)
 [Installation](#installation)
 [Step 1: Install WSL and Ubuntu](step-1-install-wsl-and-ubuntu)
-[Step 2: Update to WSL2]
+[Step 2: Update to WSL2](step-2-update-to-wsl2)
 [Step 3: Install the Driver for Linux GUI Apps]
 [Step 4: Running GUI Apps (Optional)]
 [Step 5: Install Nvidia CUDA Drivers in Ubuntu]
