@@ -360,4 +360,4 @@ For further assistance, consult the ROS community forums and the official TIAGo+
 
 [Testing TIAGo++ Simulation](https://wiki.ros.org/Robots/TIAGo%2B%2B/Tutorials/Installation/Testing%20Tiago%2B%2B%20Simulation)
 
-This README provides a comprehensive guide to setting up and operating the TIAGo++ robot in a simulated environment using ROS Noetic. Follow the steps closely to ensure a successful installation and operation. For more detailed information, refer to the official ROS and TIAGo++ documentation linked above.
+  This README provides a comprehensive guide to setting up and operating the TIAGo++ robot in a simulated environment using ROS Noetic. Follow the steps closely to ensure a successful installation and operation. For more detailed information, refer to the official ROS and TIAGo++ documentation linked above.
