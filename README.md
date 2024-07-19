@@ -352,7 +352,7 @@ Check for hardware compatibility issues, especially with NVIDIA or Intel graphic
 
 For further assistance, consult the ROS community forums and the official TIAGo++ tutorials.
 
-References
+# References
 
 [Installing Ubuntu with ROS + TIAGO ++](https://wiki.ros.org/Robots/TIAGo%2B%2B/Tutorials/Installation/InstallUbuntuAndROS)
 
