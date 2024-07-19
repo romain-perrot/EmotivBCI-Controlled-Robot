@@ -3,26 +3,46 @@
   This project focuses on developing a BCI-controlled robotic assistant using the TIAGo++ robot parallel gripper from PAL Robotics for object grasping tasks. By leveraging Emotiv's Epoch+ headset, I aim to enable intuitive control of robotic grasping through mental commands, enhancing accessibility and efficiency in assistive robotics.
 
 # Table of Contents
-[Introduction](#introduction)
-[Installation](#installation)
-[Step 1: Install WSL and Ubuntu](step-1-install-wsl-and-ubuntu)
-[Step 2: Update to WSL2](step-2-update-to-wsl2)
-[Step 3: Install the Driver for Linux GUI Apps]
-[Step 4: Running GUI Apps (Optional)]
-[Step 5: Install Nvidia CUDA Drivers in Ubuntu]
-[Step 6: Install a File Manager for Ubuntu (Optional)]
-[Step 7: ROS Noetic Installation Instructions]
-[Step 8: Create ROS Workspace]
-[Step 9: Setting Up TIAGo++ Simulation Workspace]
-[Step 10: ROS and VSCode]
-[Step 11: Access to Connected Devices over WSL]
-[Step 12: Docker-based Installation]
-[Step 13: Testing TIAGo++ Simulation]
-[Explanation]
-[Parallel Gripper Simulation]
-[Gripper Control]
-[Troubleshooting]
-[References]
+
+- [Introduction](#introduction)
+
+- [Installation](#installation)
+
+  - [Step 1: Install WSL and Ubuntu](#step-1-install-wsl-and-ubuntu)
+
+  - [Step 2: Update to WSL2](#step-2-update-to-wsl2)
+
+  - [Step 3: Install the Driver for Linux GUI Apps](#step-3-install-the-driver-for-linux-gui-apps)
+
+  - [Step 4: Running GUI Apps (Optional)](#step-4-running-gui-apps-optional)
+
+  - [Step 5: Install Nvidia CUDA Drivers in Ubuntu](#step-5-install-nvidia-cuda-drivers-in-ubuntu)
+
+  - [Step 6: Install a File Manager for Ubuntu (Optional)](#step-6-install-a-file-manager-for-ubuntu-optional)
+
+  - [Step 7: ROS Noetic Installation Instructions](#step-7-ros-noetic-installation-instructions)
+
+  - [Step 8: Create ROS Workspace](#step-8-create-ros-workspace)
+
+  - [Step 9: Setting Up TIAGo++ Simulation Workspace](#step-9-setting-up-tiago-simulation-workspace)
+
+  - [Step 10: ROS and VSCode](#step-10-ros-and-vscode)
+
+  - [Step 11: Access to Connected Devices over WSL](#step-11-access-to-connected-devices-over-wsl)
+
+  - [Step 12: Docker-based Installation](#step-12-docker-based-installation)
+
+  - [Step 13: Testing TIAGo++ Simulation](#step-13-testing-tiago-simulation)
+
+- [Explanation](#explanation)
+
+  - [Parallel Gripper Simulation](#parallel-gripper-simulation)
+
+    - [Gripper Control](#gripper-control)
+
+- [Troubleshooting](#troubleshooting)
+
+- [References](#references)
 
 # Introduction
 
