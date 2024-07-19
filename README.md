@@ -5,7 +5,7 @@
 # Table of Contents
 [Introduction](#introduction)
 [Installation](#installation)
-[Step 1: Install WSL and Ubuntu](step-1--install-wsl-and-ubuntu)
+[Step 1: Install WSL and Ubuntu](step-1-install-wsl-and-ubuntu)
 [Step 2: Update to WSL2]
 [Step 3: Install the Driver for Linux GUI Apps]
 [Step 4: Running GUI Apps (Optional)]
