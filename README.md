@@ -4,26 +4,26 @@
 
 # Table of Contents
 [Introduction](#introduction)
-Prerequisites
-Installation
-Step 1: Install WSL and Ubuntu
-Step 2: Update to WSL2
-Step 3: Install the Driver for Linux GUI Apps
-Step 4: Running GUI Apps (Optional)
-Step 5: Install Nvidia CUDA Drivers in Ubuntu
-Step 6: Install a File Manager for Ubuntu (Optional)
-Step 7: ROS Noetic Installation Instructions
-Step 8: Create ROS Workspace
-Step 9: Setting Up TIAGo++ Simulation Workspace
-Step 10: ROS and VSCode
-Step 11: Access to Connected Devices over WSL
-Step 12: Docker-based Installation
-Step 13: Testing TIAGo++ Simulation
-Explanation
-Parallel Gripper Simulation
-Gripper Control
-Troubleshooting
-References
+[Prerequisites](#prerequisites)
+[Installation](#installation)
+[Step 1: Install WSL and Ubuntu](step-1':-install-wsl-and-ubuntu)
+[Step 2: Update to WSL2]
+[Step 3: Install the Driver for Linux GUI Apps]
+[Step 4: Running GUI Apps (Optional)]
+[Step 5: Install Nvidia CUDA Drivers in Ubuntu]
+[Step 6: Install a File Manager for Ubuntu (Optional)]
+[Step 7: ROS Noetic Installation Instructions]
+[Step 8: Create ROS Workspace]
+[Step 9: Setting Up TIAGo++ Simulation Workspace]
+[Step 10: ROS and VSCode]
+[Step 11: Access to Connected Devices over WSL]
+[Step 12: Docker-based Installation]
+[Step 13: Testing TIAGo++ Simulation]
+[Explanation]
+[Parallel Gripper Simulation]
+[Gripper Control]
+[Troubleshooting]
+[References]
 
 # Introduction
 
