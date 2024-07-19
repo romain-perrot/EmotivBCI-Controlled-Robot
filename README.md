@@ -18,7 +18,7 @@
 
   - [Step 5: Install Nvidia CUDA Drivers in Ubuntu](#step-5-install-nvidia-cuda-drivers-in-ubuntu)
 
-  - [Step 6: Install a File Manager for Ubuntu (Optional)](#step-6-install-a-file-manager-for-ubuntu-optional)
+  - [Step 6: File manager for Ubuntu (Optional)](#step-6-file-manager-for-ubuntu-optional)
 
   - [Step 7: ROS Noetic Installation Instructions](#step-7-ros-noetic-installation-instructions)
 
@@ -85,7 +85,7 @@ wsl --update
 wsl --shutdown
 ```
 
-### Step 4: Running GUI apps (not necessary)
+### Step 4: Running GUI apps (optional)
 1. Open Ubuntu Terminal
 2. Enter the commands:
 ```bash
