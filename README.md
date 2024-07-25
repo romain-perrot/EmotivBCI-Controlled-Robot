@@ -33,6 +33,8 @@
   - [Step 12: Docker-based Installation](#step-12-docker-based-installation)
 
   - [Step 13: Testing TIAGo++ Simulation](#step-13-testing-tiago-simulation)
+ 
+  - [Step 14: Node-RED Installation and Setup](#step-14-node-red-installation-and-setup)
 
 - [Explanation](#explanation)
 
@@ -343,6 +345,89 @@ def close_gripper():
             gripper_r_pub.publish(traj_right)
 ```
 
+### Step 14: Node-RED Installation and Setup
+Node-RED is a powerful tool for visual programming, especially useful in IoT applications. Below are the detailed instructions for setting up Node-RED on a Windows environment and installing necessary libraries.
+
+#### Prerequisites
+- Node.js (version 12.x or later)
+- npm (Node package manager)
+
+#### Installation
+1. Install Node.js
+    - Download the latest LTS version of Node.js from the official [Node.js home page](https://nodejs.org/).
+    - Run the downloaded MSI file to install Node.js. This requires local administrator rights.
+    - Open a command prompt and verify the installation:
+```bash
+node --version
+npm --version
+```
+
+You should see output similar to:
+```plaintext
+v18.15.0
+9.5.0
+```
+
+2. Install Node-RED globally using npm:
+```bash
+npm install -g --unsafe-perm node-red
+```
+
+3. Start Node-RED with the following command:
+```bash
+node-red
+```
+
+Access the Node-RED editor by navigating to http://localhost:1880 in your web browser.
+
+#### Libraries and Modules
+To enhance Node-RED's functionality, install the following libraries:
+
+Node-RED Dashboard (install the dashboard nodes to create a web-based dashboard):
+```bash
+cd ~/.node-red
+npm install node-red-dashboard
+```
+
+Node-RED Contrib Emotiv BCI (for integrating Emotiv BCI devices):
+```bash
+cd ~/.node-red
+npm install node-red-contrib-emotiv-bci
+```
+
+##### You can also install them directly into the NODE-Red palette available your web browser: http://localhost:1880 
+
+#### Importing Flows
+
+1. Open the Node-RED Editor by launching your web browser and navigate to http://localhost:1880 to access the Node-RED editor.
+
+2. Import the Node-RED Flows:
+
+    - In the Node-RED editor, click on the menu button (three horizontal lines) in the top right corner.
+    - Select Import from the dropdown menu.
+    - Click on Select a file to import and navigate to your [flows.json](node-red flows.json) file. Alternatively, you can copy and paste the JSON content directly into the import dialog.
+    - Click on Import to load the flows into your Node-RED workspace.
+    - Save and Deploy
+
+3. Restart Node-RED
+```bash
+node-red-stop
+node-red-start
+```
+
+4. Verify the Import and Configure Flows
+
+- After Node-RED restarts, verify that the imported flows appear correctly in the Node-RED editor.
+- Configure the imported flows according to your requirements. This might include:
+  - Setting up your account details
+  - Configuring the training profile for BCI devices
+  - Adjusting mental command settings
+  - ...
+- To edit node configurations, double-click on each node to open its configuration dialog, make the necessary changes, and then click Done.
+- Test the Flows
+
+Ensure that all flows are functioning as expected by testing them in the Node-RED editor. Check for any errors or misconfigurations in the debug panel.
+
 ## Troubleshooting
 Ensure all dependencies are installed correctly.
 
@@ -352,6 +437,12 @@ Check for hardware compatibility issues, especially with NVIDIA or Intel graphic
 
 For further assistance, consult the ROS community forums and the official TIAGo++ tutorials.
 
+Ensure that all required nodes and libraries are installed. If any nodes are missing, install them using npm:
+```bash
+cd ~/.node-red
+npm install <node-package-name>
+```
+
 # References
 
 [Installing Ubuntu with ROS + TIAGO ++](https://wiki.ros.org/Robots/TIAGo%2B%2B/Tutorials/Installation/InstallUbuntuAndROS)
@@ -359,5 +450,7 @@ For further assistance, consult the ROS community forums and the official TIAGo+
 [Installing Tiago++ Tutorial docker](https://wiki.ros.org/Robots/TIAGo%2B%2B/Tutorials/Installation/Installing_Tiago%2B%2B_tutorial_docker)
 
 [Testing TIAGo++ Simulation](https://wiki.ros.org/Robots/TIAGo%2B%2B/Tutorials/Installation/Testing%20Tiago%2B%2B%20Simulation)
+
+[Node-RED Contrib Emotiv BCI](https://flows.nodered.org/node/node-red-contrib-emotiv-bci)
 
   This README provides a comprehensive guide to setting up and operating the TIAGo++ robot in a simulated environment using ROS Noetic. Follow the steps closely to ensure a successful installation and operation. For more detailed information, refer to the official ROS and TIAGo++ documentation linked above.
