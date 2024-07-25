@@ -405,7 +405,7 @@ npm install node-red-contrib-emotiv-bci
 
     - In the Node-RED editor, click on the menu button (three horizontal lines) in the top right corner.
     - Select Import from the dropdown menu.
-    - Copy and paste the [JSON Flows](./node-red-flows.json) directly into the import dialog.
+    - Copy and paste the [JSON Flows](./flows.json) directly into the import dialog.
     - Click on Import to load the flows into your Node-RED workspace.
     - Save and Deploy
 
