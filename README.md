@@ -36,7 +36,7 @@
  
   - [Step 14: Node-RED Installation and Setup](#step-14-node-red-installation-and-setup)
 
-- [Explanation](#explanation)
+- [Code explanation](#code-explanation)
 
   - [Parallel Gripper Simulation](#parallel-gripper-simulation)
 
@@ -273,78 +273,6 @@ If you launched the rocker with nvidia support choose the NVIDIA (Performance Mo
 If you launched the rocker with intel support choose NVIDIA On-Demand (Default).
 Restart the laptop and it should work.
 
-## Explanation
-### Parallel Gripper Simulation
-
-#### Gripper Control
-The project includes functionality to open and close the grippers on the TIAGo++ robot. Below are the main functions for controlling the grippers:
-
-Open Gripper
-```python
-def open_gripper():
-    global gripper_l_pub, gripper_r_pub, tilt
-
-    with lock:
-        current_tilt = tilt
-
-        print('Opening gripper: ', GRIPPER_OPEN)
-        rospy.loginfo(f'Opening gripper: {GRIPPER_OPEN}')
-
-        traj_left = trajectory_msgs.msg.JointTrajectory()
-        traj_right = trajectory_msgs.msg.JointTrajectory()
-
-        traj_left.joint_names = GRIPPER_L_NAMES
-        traj_right.joint_names = GRIPPER_R_NAMES
-
-        p = trajectory_msgs.msg.JointTrajectoryPoint()
-        p.positions = GRIPPER_OPEN
-        p.time_from_start = rospy.Duration(2)
-
-        traj_left.points = [p]
-        traj_right.points = [p]
-
-        if current_tilt == "center":
-            gripper_l_pub.publish(traj_left)
-            gripper_r_pub.publish(traj_right)
-        elif current_tilt == "left":
-            gripper_l_pub.publish(traj_left)
-        elif current_tilt == "right":
-            gripper_r_pub.publish(traj_right)
-```
-
-Close Gripper
-```python
-def close_gripper():
-    global gripper_l_pub, gripper_r_pub, tilt
-
-    with lock:
-        current_tilt = tilt
-
-        print('Closing gripper: ', GRIPPER_CLOSE)
-        rospy.loginfo(f'Closing gripper: {GRIPPER_CLOSE}')
-
-        traj_left = trajectory_msgs.msg.JointTrajectory()
-        traj_right = trajectory_msgs.msg.JointTrajectory()
-
-        traj_left.joint_names = GRIPPER_L_NAMES
-        traj_right.joint_names = GRIPPER_R_NAMES
-
-        p = trajectory_msgs.msg.JointTrajectoryPoint()
-        p.positions = GRIPPER_CLOSE
-        p.time_from_start = rospy.Duration(2)
-
-        traj_left.points = [p]
-        traj_right.points = [p]
-
-        if current_tilt == "center":
-            gripper_l_pub.publish(traj_left)
-            gripper_r_pub.publish(traj_right)
-        elif current_tilt == "left":
-            gripper_l_pub.publish(traj_left)
-        elif current_tilt == "right":
-            gripper_r_pub.publish(traj_right)
-```
-
 ### Step 14: Node-RED Installation and Setup
 Node-RED is a powerful tool for visual programming, especially useful in IoT applications. Below are the detailed instructions for setting up Node-RED on a Windows environment and installing necessary libraries.
 
@@ -427,6 +355,78 @@ node-red-start
 - Test the Flows
 
 Ensure that all flows are functioning as expected by testing them in the Node-RED editor. Check for any errors or misconfigurations in the debug panel.
+
+## Code explanation
+### Parallel Gripper Simulation
+
+#### Gripper Control
+The project includes functionality to open and close the grippers on the TIAGo++ robot. Below are the main functions for controlling the grippers:
+
+Open Gripper
+```python
+def open_gripper():
+    global gripper_l_pub, gripper_r_pub, tilt
+
+    with lock:
+        current_tilt = tilt
+
+        print('Opening gripper: ', GRIPPER_OPEN)
+        rospy.loginfo(f'Opening gripper: {GRIPPER_OPEN}')
+
+        traj_left = trajectory_msgs.msg.JointTrajectory()
+        traj_right = trajectory_msgs.msg.JointTrajectory()
+
+        traj_left.joint_names = GRIPPER_L_NAMES
+        traj_right.joint_names = GRIPPER_R_NAMES
+
+        p = trajectory_msgs.msg.JointTrajectoryPoint()
+        p.positions = GRIPPER_OPEN
+        p.time_from_start = rospy.Duration(2)
+
+        traj_left.points = [p]
+        traj_right.points = [p]
+
+        if current_tilt == "center":
+            gripper_l_pub.publish(traj_left)
+            gripper_r_pub.publish(traj_right)
+        elif current_tilt == "left":
+            gripper_l_pub.publish(traj_left)
+        elif current_tilt == "right":
+            gripper_r_pub.publish(traj_right)
+```
+
+Close Gripper
+```python
+def close_gripper():
+    global gripper_l_pub, gripper_r_pub, tilt
+
+    with lock:
+        current_tilt = tilt
+
+        print('Closing gripper: ', GRIPPER_CLOSE)
+        rospy.loginfo(f'Closing gripper: {GRIPPER_CLOSE}')
+
+        traj_left = trajectory_msgs.msg.JointTrajectory()
+        traj_right = trajectory_msgs.msg.JointTrajectory()
+
+        traj_left.joint_names = GRIPPER_L_NAMES
+        traj_right.joint_names = GRIPPER_R_NAMES
+
+        p = trajectory_msgs.msg.JointTrajectoryPoint()
+        p.positions = GRIPPER_CLOSE
+        p.time_from_start = rospy.Duration(2)
+
+        traj_left.points = [p]
+        traj_right.points = [p]
+
+        if current_tilt == "center":
+            gripper_l_pub.publish(traj_left)
+            gripper_r_pub.publish(traj_right)
+        elif current_tilt == "left":
+            gripper_l_pub.publish(traj_left)
+        elif current_tilt == "right":
+            gripper_r_pub.publish(traj_right)
+```
 
 ## Troubleshooting
 Ensure all dependencies are installed correctly.
