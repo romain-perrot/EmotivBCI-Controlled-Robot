@@ -1,6 +1,6 @@
 # Installation
 
-####  This README provides a comprehensive guide to setting up and operating the TIAGo++ robot in a simulated environment using ROS Noetic. Follow the steps closely to ensure a successful installation and operation. For more detailed information, refer to the official ROS and TIAGo++ documentation available [here](docs/REFERENCES.md).
+This README provides a comprehensive guide to setting up and operating the TIAGo++ robot in a simulated environment using ROS Noetic. Follow the steps closely to ensure a successful installation and operation. For more detailed information, refer to the official ROS and TIAGo++ documentation available [here](/REFERENCES.md).
 
 # Table of Contents
 
