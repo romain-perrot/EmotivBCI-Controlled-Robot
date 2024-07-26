@@ -114,9 +114,6 @@ def move_gripper(position):
 def handle_gripper_action(build_counter, action_func):
     global prev_time
 
-    if lock.locked():
-        return 'LOCKED'
-
     try:
         request_data = request.get_json()
         timestamp = request_data['timestamp']
@@ -148,11 +145,19 @@ def handle_gripper_action(build_counter, action_func):
 @app.route('/emotiv/gripper/open', methods=['POST'])
 def handle_open_gripper():
     global openning
+
+    if lock.locked():
+        return 'LOCKED'
+        
     return handle_gripper_action(openning, lambda: move_gripper(GRIPPER_OPEN_POSE))
 
 @app.route('/emotiv/gripper/close', methods=['POST'])
 def handle_close_gripper():
     global closing
+
+    if lock.locked():
+        return 'LOCKED'
+
     return handle_gripper_action(closing, lambda: move_gripper(GRIPPER_CLOSE_POSE))
 
 @app.route('/emotiv/gyroscope/X', methods=['POST'])
