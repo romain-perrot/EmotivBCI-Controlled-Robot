@@ -330,3 +330,5 @@ node-red-start
 - Test the Flows
 
 Ensure that all flows are functioning as expected by testing them in the Node-RED editor. Check for any errors or misconfigurations in the debug panel.
+
+####  This README provides a comprehensive guide to setting up and operating the TIAGo++ robot in a simulated environment using ROS Noetic. Follow the steps closely to ensure a successful installation and operation. For more detailed information, refer to the official ROS and TIAGo++ documentation linked above.
