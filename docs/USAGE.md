@@ -13,84 +13,26 @@ This project involves the setup, simulation, and control of the TIAGo++ robot us
 
 ## Running Project
 
-To test the TIAGo++ simulation, follow these steps:
+To test the project, follow these steps:
 
 1. Open an Ubuntu terminal and source the workspace:
    ```bash
    cd /tiago_dual_public_ws/
    source ./devel/setup.bash
+   ```
 
-Launch the simulation:
-roslaunch tiago_dual_gazebo tiago_dual_gazebo.launch public_sim:=true end_effector_left:=pal-gripper end_effector_right:=pal-gripper
+2. Still in an Ubuntu terminal, launch the simulation:
+   ```bash
+   roslaunch tiago_dual_gazebo tiago_dual_gazebo.launch public_sim:=true end_effector_left:=pal-gripper end_effector_right:=pal-gripper
+   ```
 
-## Code explanation
-### Parallel Gripper Simulation
+3. In a cmd terminal, launch:
+   - NODE-Red flows:
+      ```bash
+      node-red
+      ```
 
-#### Gripper Control
-The project includes functionality to open and close the grippers on the TIAGo++ robot. Below are the main functions for controlling the grippers:
-
-Open Gripper
-```python
-def open_gripper():
-    global gripper_l_pub, gripper_r_pub, tilt
-
-    with lock:
-        current_tilt = tilt
-
-        print('Opening gripper: ', GRIPPER_OPEN)
-        rospy.loginfo(f'Opening gripper: {GRIPPER_OPEN}')
-
-        traj_left = trajectory_msgs.msg.JointTrajectory()
-        traj_right = trajectory_msgs.msg.JointTrajectory()
-
-        traj_left.joint_names = GRIPPER_L_NAMES
-        traj_right.joint_names = GRIPPER_R_NAMES
-
-        p = trajectory_msgs.msg.JointTrajectoryPoint()
-        p.positions = GRIPPER_OPEN
-        p.time_from_start = rospy.Duration(2)
-
-        traj_left.points = [p]
-        traj_right.points = [p]
-
-        if current_tilt == "center":
-            gripper_l_pub.publish(traj_left)
-            gripper_r_pub.publish(traj_right)
-        elif current_tilt == "left":
-            gripper_l_pub.publish(traj_left)
-        elif current_tilt == "right":
-            gripper_r_pub.publish(traj_right)
-```
-
-Close Gripper
-```python
-def close_gripper():
-    global gripper_l_pub, gripper_r_pub, tilt
-
-    with lock:
-        current_tilt = tilt
-
-        print('Closing gripper: ', GRIPPER_CLOSE)
-        rospy.loginfo(f'Closing gripper: {GRIPPER_CLOSE}')
-
-        traj_left = trajectory_msgs.msg.JointTrajectory()
-        traj_right = trajectory_msgs.msg.JointTrajectory()
-
-        traj_left.joint_names = GRIPPER_L_NAMES
-        traj_right.joint_names = GRIPPER_R_NAMES
-
-        p = trajectory_msgs.msg.JointTrajectoryPoint()
-        p.positions = GRIPPER_CLOSE
-        p.time_from_start = rospy.Duration(2)
-
-        traj_left.points = [p]
-        traj_right.points = [p]
-
-        if current_tilt == "center":
-            gripper_l_pub.publish(traj_left)
-            gripper_r_pub.publish(traj_right)
-        elif current_tilt == "left":
-            gripper_l_pub.publish(traj_left)
-        elif current_tilt == "right":
-            gripper_r_pub.publish(traj_right)
-```
+   - main program:
+      ```bash
+      python3 main.py
+      ```
