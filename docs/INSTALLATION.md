@@ -145,7 +145,7 @@ Initialize rosdep and update it to handle dependencies:
     sudo rosdep init
     rosdep update
     ```
-5.Enter “roscore” to start ros
+5. Enter “roscore” to start ros
 
 ### Step 2: Create ROS Workspace
 1. Open an Ubuntu terminal and enter:
@@ -196,25 +196,36 @@ Currently source-based installation is provided.
     docker pull palroboticssl/tiago_dual_tutorials:noetic
     ```
 2. Rocker is mandatory for the following tutorials to have a graphical user interface with docker. [osrf/rocker](https://github.com/osrf/rocker),it is a tool to run docker images with customized local support injected for things like nvidia support, and user_id specific files for cleaner mounting file permissions. You could also find more useful information on this topic on [Tooling with Docker](https://wiki.ros.org/docker/Tutorials#Tooling_with_Docker).
-2.1.1 rocker with nvidia support:
-Install nvidia docker support: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker:
-    ```bash
-    distribution=$(. /etc/os-release;echo $ID$VERSION_ID)    && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -    && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-    sudo apt-get update
-    sudo apt-get install -y nvidia-docker2
-    sudo systemctl restart docker
-    ```
-2.1.2 Run the rocker
-    ```bash
-    rocker --home --user --nvidia --x11 --privileged palroboticssl/tiago_dual_tutorials:noetic
-    ```
-2.2.1 rocker with intel integrated graphics support:
-    ```bash
-    rocker --home --user --x11 --privileged palroboticssl/tiago_dual_tutorials:noetic --devices /dev/dri/card0
-    ```
-The options --home and --user are used so that the user won't be root and home directory will be mounted
-If you are using a version of rocker that is lower than version 0.2.4, you would need to remove the --privileged option
+
+   2.1.1 rocker with nvidia support:
+   
+        Install nvidia docker support: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker:
+   
+            ```bash
+            distribution=$(. /etc/os-release;echo $ID$VERSION_ID)    && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -    && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+            sudo apt-get update
+            sudo apt-get install -y nvidia-docker2
+            sudo systemctl restart docker
+            ```
+
+    2.1.2 Run the rocker
+   
+            ```bash
+            rocker --home --user --nvidia --x11 --privileged palroboticssl/tiago_dual_tutorials:noetic
+            ```
+
+    2.2.1 rocker with intel integrated graphics support:
+   
+            ```bash
+            rocker --home --user --x11 --privileged palroboticssl/tiago_dual_tutorials:noetic --devices /dev/dri/card0
+            ```
+
+The options --home and --user are used so that the user won't be root and home directory will be mounted.
+
+If you are using a version of rocker that is lower than version 0.2.4, you would need to remove the '--privileged option'.
+
 3. Once inside the rocker you can do `terminator -u` to open a terminal inside the rocker that will allow you to use several terminals on the same rocker (Do not forget to source them all)
+
 4. Check everything is properly installed by running the TIAGo++ simulation tutorial
 
 ### Step 3: Testing TIAGo++ Simulation
@@ -325,13 +336,13 @@ Node-RED Contrib Emotiv BCI (for integrating Emotiv BCI devices):
 
 4. Verify the Import and Configure Flows
 
-- After Node-RED restarts, verify that the imported flows appear correctly in the Node-RED editor.
-- Configure the imported flows according to your requirements. This might include:
-  - Setting up your account details
-  - Configuring the training profile for BCI devices
-  - Adjusting mental command settings
-  - ...
-- To edit node configurations, double-click on each node to open its configuration dialog, make the necessary changes, and then click Done.
-- Test the Flows
+    - After Node-RED restarts, verify that the imported flows appear correctly in the Node-RED editor.
+    - Configure the imported flows according to your requirements. This might include:
+      - Setting up your account details
+      - Configuring the training profile for BCI devices
+      - Adjusting mental command settings
+      - ...
+    - To edit node configurations, double-click on each node to open its configuration dialog, make the necessary changes, and then click Done.
+    - Test the Flows
 
 Ensure that all flows are functioning as expected by testing them in the Node-RED editor. Check for any errors or misconfigurations in the debug panel.
