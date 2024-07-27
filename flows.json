@@ -84,7 +84,7 @@
             "a1548fb2acddbb7b",
             "7c0bad96c5b8d65a"
         ],
-        "x": 734,
+        "x": 814,
         "y": 419,
         "w": 392,
         "h": 322
@@ -131,11 +131,12 @@
         "nodes": [
             "ce1781b3f9785571",
             "cd0938c71b767828",
-            "78b75d1a175ab203"
+            "78b75d1a175ab203",
+            "769ba4978010f827"
         ],
         "x": 454,
         "y": 479,
-        "w": 252,
+        "w": 342,
         "h": 202
     },
     {
@@ -161,7 +162,7 @@
         ],
         "x": 1184,
         "y": 139,
-        "w": 222,
+        "w": 282,
         "h": 162
     },
     {
@@ -194,20 +195,43 @@
         "h": 322
     },
     {
+        "id": "45533d472c436ec0",
+        "type": "group",
+        "z": "e1f01e5e.1a3c4",
+        "name": "Dashboard",
+        "style": {
+            "label": true,
+            "stroke": "#77C6CC",
+            "fill": "#77C6CC",
+            "fill-opacity": "0.25",
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "db996083278e494c",
+            "b08cae830129419c",
+            "466a6a0ab381ade6"
+        ],
+        "x": 1224,
+        "y": 539,
+        "w": 342,
+        "h": 82
+    },
+    {
         "id": "fea83661.1ab498",
         "type": "ui_group",
-        "name": "Neutral",
+        "name": "Actions + Head tilt",
         "tab": "d7908651.24f9b8",
         "order": 1,
         "disp": false,
-        "width": "6",
+        "width": "18",
         "collapse": false,
         "className": ""
     },
     {
         "id": "d7908651.24f9b8",
         "type": "ui_tab",
-        "name": "Mental commands dashboard",
+        "name": "Emotiv BCI to ROS",
         "icon": "dashboard",
         "order": 1,
         "disabled": false,
@@ -311,37 +335,43 @@
         }
     },
     {
-        "id": "d2c016d14e5c737a",
-        "type": "ui_group",
-        "name": "Action 1",
-        "tab": "d7908651.24f9b8",
-        "order": 2,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
+        "id": "5bfd748bbbfcb226",
+        "type": "ui_tab",
+        "name": "Test 2MC + neutral",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
-        "id": "0d817445ad09d4c5",
-        "type": "ui_group",
-        "name": "Action 2",
-        "tab": "d7908651.24f9b8",
-        "order": 3,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "cccbe731d0e3b55d",
+        "id": "04fbf8e4c6dce8f4",
         "type": "ui_group",
         "name": "Testing",
-        "tab": "d7908651.24f9b8",
-        "order": 4,
+        "tab": "5bfd748bbbfcb226",
+        "order": 1,
         "disp": true,
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "6fa71398859d95b1",
+        "type": "ui_spacer",
+        "z": "e1f01e5e.1a3c4",
+        "name": "spacer",
+        "group": "fea83661.1ab498",
+        "order": 4,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "0ef81099c358ad5a",
+        "type": "ui_spacer",
+        "z": "e1f01e5e.1a3c4",
+        "name": "spacer",
+        "group": "fea83661.1ab498",
+        "order": 6,
+        "width": 6,
+        "height": 1
     },
     {
         "id": "303f9d115b69dfed",
@@ -563,7 +593,7 @@
         "id": "44c939c1.e4e3a8",
         "type": "ui_text",
         "z": "5f0c638b67c035fd",
-        "group": "cccbe731d0e3b55d",
+        "group": "",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -922,8 +952,8 @@
         "type": "ui_gauge",
         "z": "912b42b3010b057f",
         "name": "",
-        "group": "d2c016d14e5c737a",
-        "order": 1,
+        "group": "04fbf8e4c6dce8f4",
+        "order": 2,
         "width": 0,
         "height": 0,
         "gtype": "gage",
@@ -950,7 +980,7 @@
         "type": "ui_gauge",
         "z": "912b42b3010b057f",
         "name": "",
-        "group": "fea83661.1ab498",
+        "group": "04fbf8e4c6dce8f4",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -978,8 +1008,8 @@
         "type": "ui_gauge",
         "z": "912b42b3010b057f",
         "name": "",
-        "group": "0d817445ad09d4c5",
-        "order": 1,
+        "group": "04fbf8e4c6dce8f4",
+        "order": 3,
         "width": 0,
         "height": 0,
         "gtype": "gage",
@@ -1043,11 +1073,11 @@
         "name": "",
         "group": "fea83661.1ab498",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 4,
         "gtype": "gage",
         "title": "Neutral",
-        "label": "units",
+        "label": "%",
         "format": "{{value}}",
         "min": 0,
         "max": "100",
@@ -1068,6 +1098,7 @@
         "id": "250d384043f5a0b6",
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
+        "d": true,
         "g": "71dedeec6942bbbe",
         "name": "Send Neutral Command",
         "method": "POST",
@@ -1091,6 +1122,7 @@
         "id": "1973c89e3a71695c",
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
+        "d": true,
         "g": "71dedeec6942bbbe",
         "name": "Send Push Command",
         "method": "POST",
@@ -1114,6 +1146,7 @@
         "id": "8c13823e944e5c04",
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
+        "d": true,
         "g": "71dedeec6942bbbe",
         "name": "Send Pull Command",
         "method": "POST",
@@ -1259,13 +1292,13 @@
         "z": "e1f01e5e.1a3c4",
         "g": "f1b3f5e90605bca8",
         "name": "",
-        "group": "d2c016d14e5c737a",
-        "order": 1,
-        "width": 0,
-        "height": 0,
+        "group": "fea83661.1ab498",
+        "order": 2,
+        "width": 6,
+        "height": 4,
         "gtype": "gage",
-        "title": "Push",
-        "label": "units",
+        "title": "Push: close gripper",
+        "label": "%",
         "format": "{{value}}",
         "min": 0,
         "max": "100",
@@ -1278,7 +1311,7 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 1310,
+        "x": 1350,
         "y": 220,
         "wires": []
     },
@@ -1288,13 +1321,13 @@
         "z": "e1f01e5e.1a3c4",
         "g": "f1b3f5e90605bca8",
         "name": "",
-        "group": "0d817445ad09d4c5",
-        "order": 1,
-        "width": 0,
-        "height": 0,
+        "group": "fea83661.1ab498",
+        "order": 3,
+        "width": 6,
+        "height": 4,
         "gtype": "gage",
-        "title": "Pull",
-        "label": "units",
+        "title": "Pull: open gripper",
+        "label": "%",
         "format": "{{value}}",
         "min": 0,
         "max": "100",
@@ -1307,7 +1340,7 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 1310,
+        "x": 1350,
         "y": 260,
         "wires": []
     },
@@ -1316,15 +1349,15 @@
         "type": "function",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "gyrX",
-        "func": "msg.payload = {\n    gyrX: msg.payload,\n};\nreturn msg;",
+        "name": "magX",
+        "func": "msg.payload = {\n    magX: msg.payload,\n};\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
+        "x": 890,
         "y": 480,
         "wires": [
             [
@@ -1338,15 +1371,15 @@
         "type": "function",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "gyrZ",
-        "func": "msg.payload = {\n    gyrZ: msg.payload,\n};\nreturn msg;",
+        "name": "magZ",
+        "func": "msg.payload = {\n    magZ: msg.payload,\n};\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
+        "x": 890,
         "y": 680,
         "wires": [
             [
@@ -1360,15 +1393,15 @@
         "type": "function",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "gyrY",
-        "func": "msg.payload = {\n    gyrY: msg.payload,\n};\nreturn msg;",
+        "name": "magY",
+        "func": "msg.payload = {\n    magY: msg.payload,\n};\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
+        "x": 890,
         "y": 580,
         "wires": [
             [
@@ -1434,12 +1467,13 @@
         "z": "e1f01e5e.1a3c4",
         "g": "a12fd97fea4d5139",
         "name": "MS",
-        "metric": "1",
-        "x": 580,
+        "metric": "7",
+        "x": 600,
         "y": 580,
         "wires": [
             [
-                "7bb91a18e553130d"
+                "7bb91a18e553130d",
+                "769ba4978010f827"
             ]
         ]
     },
@@ -1449,8 +1483,8 @@
         "z": "e1f01e5e.1a3c4",
         "g": "a12fd97fea4d5139",
         "name": "MS",
-        "metric": "2",
-        "x": 580,
+        "metric": "8",
+        "x": 590,
         "y": 640,
         "wires": [
             [
@@ -1464,8 +1498,8 @@
         "z": "e1f01e5e.1a3c4",
         "g": "a12fd97fea4d5139",
         "name": "MS",
-        "metric": "0",
-        "x": 580,
+        "metric": "6",
+        "x": 600,
         "y": 520,
         "wires": [
             [
@@ -1576,12 +1610,13 @@
         "id": "abfc75f5871e89d6",
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
+        "d": true,
         "g": "ce1a6da7223e9e9f",
         "name": "Send Neutral Command",
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv/gyroscope/X",
+        "url": "http://localhost:5014/emotiv/magnetometer/X",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1589,7 +1624,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 990,
+        "x": 1070,
         "y": 500,
         "wires": [
             []
@@ -1600,7 +1635,7 @@
         "type": "debug",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "gyrX",
+        "name": "magX",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1609,7 +1644,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
+        "x": 1010,
         "y": 460,
         "wires": []
     },
@@ -1617,12 +1652,13 @@
         "id": "3cf25f8a90e93270",
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
+        "d": true,
         "g": "ce1a6da7223e9e9f",
         "name": "Send Neutral Command",
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv/gyroscope/Y",
+        "url": "http://localhost:5014/emotiv/magnetometer/Y",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1630,7 +1666,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 990,
+        "x": 1070,
         "y": 600,
         "wires": [
             []
@@ -1641,7 +1677,7 @@
         "type": "debug",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "gyrY",
+        "name": "magY",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1650,7 +1686,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
+        "x": 1010,
         "y": 560,
         "wires": []
     },
@@ -1658,12 +1694,13 @@
         "id": "7c0bad96c5b8d65a",
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
+        "d": true,
         "g": "ce1a6da7223e9e9f",
         "name": "Send Neutral Command",
         "method": "POST",
-        "ret": "txt",
+        "ret": "obj",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv/gyroscope/Z",
+        "url": "http://localhost:5014/emotiv/magnetometer/Z",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1671,7 +1708,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 990,
+        "x": 1070,
         "y": 700,
         "wires": [
             []
@@ -1682,7 +1719,7 @@
         "type": "debug",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "gyrZ",
+        "name": "magZ",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1691,8 +1728,84 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
+        "x": 1010,
         "y": 660,
         "wires": []
+    },
+    {
+        "id": "769ba4978010f827",
+        "type": "link out",
+        "z": "e1f01e5e.1a3c4",
+        "g": "a12fd97fea4d5139",
+        "name": "magY",
+        "mode": "link",
+        "links": [
+            "db996083278e494c"
+        ],
+        "x": 755,
+        "y": 580,
+        "wires": [],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "db996083278e494c",
+        "type": "link in",
+        "z": "e1f01e5e.1a3c4",
+        "g": "45533d472c436ec0",
+        "name": "magY",
+        "links": [
+            "769ba4978010f827"
+        ],
+        "x": 1265,
+        "y": 580,
+        "wires": [
+            [
+                "b08cae830129419c"
+            ]
+        ],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "466a6a0ab381ade6",
+        "type": "ui_text",
+        "z": "e1f01e5e.1a3c4",
+        "g": "45533d472c436ec0",
+        "group": "fea83661.1ab498",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Head tilt",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1480,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "b08cae830129419c",
+        "type": "function",
+        "z": "e1f01e5e.1a3c4",
+        "g": "45533d472c436ec0",
+        "name": "Tilt",
+        "func": "let magY = msg.payload;\n\nlet tilt = \"center\";\n\nif (magY < 8110) {\n    tilt = \"left\";\n} else if (magY > 8190) {\n    tilt = \"right\";\n}\n\nmsg.payload = tilt;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 580,
+        "wires": [
+            [
+                "466a6a0ab381ade6"
+            ]
+        ]
     }
 ]
