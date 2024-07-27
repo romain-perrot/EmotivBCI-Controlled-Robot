@@ -86,7 +86,7 @@
         ],
         "x": 814,
         "y": 419,
-        "w": 392,
+        "w": 312,
         "h": 322
     },
     {
@@ -212,7 +212,7 @@
             "b08cae830129419c",
             "466a6a0ab381ade6"
         ],
-        "x": 1224,
+        "x": 1154,
         "y": 539,
         "w": 342,
         "h": 82
@@ -1608,7 +1608,7 @@
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "Send Neutral Command",
+        "name": "Send magX",
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
@@ -1620,7 +1620,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1070,
+        "x": 1030,
         "y": 500,
         "wires": [
             []
@@ -1649,7 +1649,7 @@
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "Send Neutral Command",
+        "name": "Send magyY",
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
@@ -1661,7 +1661,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1070,
+        "x": 1030,
         "y": 600,
         "wires": [
             []
@@ -1690,7 +1690,7 @@
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "Send Neutral Command",
+        "name": "Send magZ",
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
@@ -1702,7 +1702,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1070,
+        "x": 1030,
         "y": 700,
         "wires": [
             []
@@ -1750,7 +1750,7 @@
         "links": [
             "769ba4978010f827"
         ],
-        "x": 1265,
+        "x": 1195,
         "y": 580,
         "wires": [
             [
@@ -1777,7 +1777,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1480,
+        "x": 1410,
         "y": 580,
         "wires": []
     },
@@ -1794,7 +1794,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
+        "x": 1280,
         "y": 580,
         "wires": [
             [
