@@ -4,9 +4,9 @@ import sys
 import rospy
 import trajectory_msgs.msg
 from control_msgs.msg import FollowJointTrajectoryActionResult
-from flask import Flask, request
-import logging
-from tqdm import tqdm
+from flask import Flask, request # Create a web server receiving HTTP POST requests
+import logging                   # Suppress Flask logging messages
+from tqdm import tqdm            # Show progress bars
 import time
 import threading
 
@@ -21,26 +21,31 @@ app = Flask(__name__)
 NODE_NAME = 'mind_control'
 
 # Variables and Constants
-lock = threading.Lock()
+lock = threading.Lock()  # Lock for synchronization or lock = False
 gripper_state = {'left': None, 'right': None}
+initial_timestamp = None
 GRIPPER_CLOSE_POSE = 0.0
 GRIPPER_OPEN_POSE = 0.09
 TOLERANCE = 0.01
 tilt = "center"
-MAX_BUILD = 50
+MAX_BUILD = 50 # Threshold for triggering an action based on received inputs
 prev_time = 0
 openning = 0
 closing = 0
 
+# Robot Joint Configuration
 GRIPPER_L_NAMES = ['gripper_left_finger_joint', 'gripper_left_inner_finger_joint']
 GRIPPER_R_NAMES = ['gripper_right_finger_joint', 'gripper_right_inner_finger_joint']
 
+# ROS Node Initialization
 rospy.init_node(NODE_NAME, disable_signals=True)
 print('Running as:', NODE_NAME)
 
+# Publishers
 gripper_l_pub = rospy.Publisher('/parallel_gripper_left_controller/command', trajectory_msgs.msg.JointTrajectory, queue_size=10)
 gripper_r_pub = rospy.Publisher('/parallel_gripper_right_controller/command', trajectory_msgs.msg.JointTrajectory, queue_size=10)
 
+# Subscribers and callback functions
 def gripper_state_callback(data):
     global gripper_state
     gripper_state['left'] = data
@@ -73,8 +78,9 @@ def move_gripper(position):
 
     with lock:
         current_tilt = tilt
-        action_name = 'Opening' if position == GRIPPER_OPEN_POSE else 'Closing'
-        rospy.loginfo(f'{action_name} gripper to position: {position}')
+        action_name = 'Open' if position == GRIPPER_OPEN_POSE else 'Clos'
+        rospy.loginfo(f'{action_name}ing gripper to position: {position}')
+        print(f'{action_name}ing gripper to position: {position}')
 
         traj_left = trajectory_msgs.msg.JointTrajectory()
         traj_right = trajectory_msgs.msg.JointTrajectory()
@@ -93,6 +99,7 @@ def move_gripper(position):
             gripper_l_pub.publish(traj_left)
             gripper_r_pub.publish(traj_right)
 
+            # Wait for gripper to reach the target position
             while not check_gripper_position('gripper_left_finger_joint', position):
                 rospy.sleep(0.1)
 
@@ -101,91 +108,153 @@ def move_gripper(position):
 
         elif current_tilt == "left":
             gripper_l_pub.publish(traj_left)
+
+            # Wait for gripper to reach the target position
             while not check_gripper_position('gripper_left_finger_joint', position):
                 rospy.sleep(0.1)
 
         elif current_tilt == "right":
             gripper_r_pub.publish(traj_right)
+
+            # Wait for gripper to reach the target position
             while not check_gripper_position('gripper_right_finger_joint', position):
                 rospy.sleep(0.1)
 
-        return f'Gripper {action_name.lower()}ed at {time.time() * 1000}', 200
+## Flask Web Server Endpoints
+# Node-RED input data from the Emotiv headset
+# Gripper control
+@app.route('/emotiv/gripper/open', methods=['POST'])
+def handle_open_gripper():
+    global lock, openning, prev_time, initial_timestamp
 
-def handle_gripper_action(build_counter, action_func):
-    global prev_time
+    if lock.locked():
+        return 'LOCKED'
 
     try:
         request_data = request.get_json()
         timestamp = request_data['timestamp']
+        print(f"Received timestamp for open: {timestamp}")
 
+        if openning == 0:
+            timestamp_seconds = time.mktime(time.strptime(timestamp, "%Y-%m-%dT%H:%M:%S.%fZ"))
+            initial_timestamp = timestamp_seconds
+            print(f"Initial timestamp for open: {initial_timestamp}")
+
+        # Progress bar initialization
         with tqdm(total=MAX_BUILD) as pbar:
+            # Time calculation
             time_now = time.time() * 1000
             time_diff = time_now - prev_time
             if time_diff > 2000:
                 print('Reset.')
                 rospy.loginfo('Reset.')
-                build_counter = 0
+                openning = 0
+                initial_timestamp = timestamp_seconds  # Reset initial timestamp
 
-            build_counter += 1
-            pbar.update(build_counter)
+            # openning and timestamp update
+            openning += 1
+            pbar.update(openning)
             prev_time = time_now
 
-            if build_counter == MAX_BUILD:
-                build_counter = 0
-                print(f'[{time_now}] Signal received, performing action...')
-                rospy.loginfo(f'[{time_now}] Signal received, performing action...')
-                return action_func()
+            if openning == MAX_BUILD:
+                openning = 0
+                print('[', time_now, ']', 'Signal received, opening gripper...')
+                rospy.loginfo(f'[{time_now}] Signal received, opening gripper...')
+                move_gripper(GRIPPER_OPEN_POSE)
+                duration = (time.time() * 1000) - initial_timestamp
+                print(f'Gripper opened at {time_now}. Action duration: {duration}')
+                return f'Gripper opened at {time_now}. Action duration: {duration}', 200
 
         return 'Progressing', 200
 
     except Exception as e:
-        logging.error(f"Error in gripper action endpoint: {e}", exc_info=True)
+        logging.error(f"Error in /emotiv/gripper/open endpoint: {e}", exc_info=True)
+        print(f"Error in /emotiv/gripper/open endpoint: {e}")
         return 'Error', 500
-
-@app.route('/emotiv/gripper/open', methods=['POST'])
-def handle_open_gripper():
-    global openning
-
-    if lock.locked():
-        return 'LOCKED'
-        
-    return handle_gripper_action(openning, lambda: move_gripper(GRIPPER_OPEN_POSE))
 
 @app.route('/emotiv/gripper/close', methods=['POST'])
 def handle_close_gripper():
-    global closing
+    global lock, closing, prev_time, initial_timestamp
 
     if lock.locked():
         return 'LOCKED'
 
-    return handle_gripper_action(closing, lambda: move_gripper(GRIPPER_CLOSE_POSE))
+    try:
+        request_data = request.get_json()
+        timestamp = request_data['timestamp']
+        print(f"Received timestamp for close: {timestamp}")
 
-@app.route('/emotiv/gyroscope/X', methods=['POST'])
-def gyroscopeX():
+        if closing == 0:
+            timestamp_seconds = time.mktime(time.strptime(timestamp, "%Y-%m-%dT%H:%M:%S.%fZ"))
+            initial_timestamp = timestamp_seconds
+            print(f"Initial timestamp for close: {initial_timestamp}")
+
+        # Progress bar initialization
+        with tqdm(total=MAX_BUILD) as pbar:
+            # Time calculation
+            time_now = time.time() * 1000
+            time_diff = time_now - prev_time
+            if time_diff > 2000:
+                print('Reset.')
+                rospy.loginfo('Reset.')
+                closing = 0
+                initial_timestamp = timestamp_seconds  # Reset initial timestamp
+
+            # closing and timestamp update
+            closing += 1
+            pbar.update(closing)
+            prev_time = time_now
+
+            if closing == MAX_BUILD:
+                closing = 0
+                print('[', time_now, ']', 'Signal received, closing gripper...')
+                rospy.loginfo(f'[{time_now}] Signal received, closing gripper...')
+                move_gripper(GRIPPER_CLOSE_POSE)
+                duration = (time.time() * 1000) - initial_timestamp
+                print(f'Gripper closed at {time_now}. Action duration: {duration}')
+                return f'Gripper closed at {time_now}. Action duration: {duration}', 200
+
+        return 'Progressing', 200
+
+    except Exception as e:
+        logging.error(f"Error in /emotiv/gripper/close endpoint: {e}", exc_info=True)
+        print(f"Error in /emotiv/gripper/close endpoint: {e}")
+        return 'Error', 500
+
+# Magnetometer data
+@app.route('/emotiv/magnetometer/X', methods=['POST'])
+def magnetometerX():
     request_data = request.get_json()
-    gyrX = request_data['gyrX']
-    return 'Gyroscope X data received', 200
+    magX = request_data['magX']
 
-@app.route('/emotiv/gyroscope/Y', methods=['POST'])
-def gyroscopeY():
-    request_data = request.get_json()
-    gyrY = request_data['gyrY']
-    return 'Gyroscope Y data received', 200
+    return 'Magnetometer X data received', 200
 
-@app.route('/emotiv/gyroscope/Z', methods=['POST'])
-def gyroscopeZ():
+@app.route('/emotiv/magnetometer/Y', methods=['POST'])
+def magnetometerY():
     global tilt
 
     request_data = request.get_json()
-    gyrZ = request_data['gyrZ']
+    magY = request_data['magY']
+    print(f'Magnetometer Y data received: {magY}')
 
+    # Determine tilt direction to control both arms, the left or right one
     tilt = "center"
-    if gyrZ > 0.1:
+    if magY < 8110:
         tilt = "left"
-    elif gyrZ < -0.1:
+    elif magY > 8190:
         tilt = "right"
+    print(f'Tilt direction set to: {tilt}')
 
-    return 'Gyroscope Z data received', 200
+    return 'Magnetometer Y data received, tilt direction set to: {tilt}', 200
 
+@app.route('/emotiv/magnetometer/Z', methods=['POST'])
+def magnetometerZ():
+    request_data = request.get_json()
+    magZ = request_data['magZ']
+
+    return 'Magnetometer Z data received', 200
+
+# Starts the Flask web server 
+# on all available IP addresses (0.0.0.0) and port 5014
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5014)
