@@ -219,6 +219,40 @@ def handle_gripper_action(build_counter, action_func):
         logging.error(f"Error in gripper action endpoint: {e}", exc_info=True)
         return 'Error', 500
 
+"""
+# Would work if a threshold is put directly in NODE-Red: command is 75% recognised for example
+def handle_gripper_action(action_func):
+    global prev_time, timestamp
+
+    try:
+        request_data = request.get_json()
+        timestamp = request_data['timestamp']
+
+        rospy.loginfo(f'[{time.time()}] Signal received, performing action...')
+        return action_func()
+
+    except Exception as e:
+        logging.error(f"Error in gripper action endpoint: {e}", exc_info=True)
+        return 'Error', 500
+
+## Flask Web Server Endpoints
+# Node-RED input data from the Emotiv headset
+# Gripper control
+@app.route('/emotiv/gripper/open', methods=['POST'])
+def handle_open_gripper():
+    if lock.locked():
+        return 'LOCKED'
+    
+    return handle_gripper_action(lambda: move_gripper(GRIPPER_OPEN_POSE))
+
+@app.route('/emotiv/gripper/close', methods=['POST'])
+def handle_close_gripper():
+    if lock.locked():
+        return 'LOCKED'
+
+    return handle_gripper_action(lambda: move_gripper(GRIPPER_CLOSE_POSE))
+"""
+
 # - - - - - - - -
 
 ## Flask Web Server Endpoints
