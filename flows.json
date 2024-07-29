@@ -84,7 +84,7 @@
             "a1548fb2acddbb7b",
             "7c0bad96c5b8d65a"
         ],
-        "x": 814,
+        "x": 794,
         "y": 419,
         "w": 312,
         "h": 322
@@ -136,7 +136,7 @@
         ],
         "x": 454,
         "y": 479,
-        "w": 342,
+        "w": 322,
         "h": 202
     },
     {
@@ -210,12 +210,35 @@
         "nodes": [
             "db996083278e494c",
             "b08cae830129419c",
-            "466a6a0ab381ade6"
+            "466a6a0ab381ade6",
+            "85cea2cdd1e13d4e",
+            "959f04cee26a69ee"
         ],
-        "x": 1154,
-        "y": 539,
+        "x": 1124,
+        "y": 519,
         "w": 342,
-        "h": 82
+        "h": 122
+    },
+    {
+        "id": "831ddf5fbc91a672",
+        "type": "group",
+        "z": "e1f01e5e.1a3c4",
+        "name": "Commands test",
+        "style": {
+            "fill": "#999999",
+            "fill-opacity": "0.25",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "91385728185e65c2",
+            "cd013d53bb8f7ca4"
+        ],
+        "x": 194,
+        "y": 179,
+        "w": 212,
+        "h": 162
     },
     {
         "id": "fea83661.1ab498",
@@ -354,23 +377,23 @@
         "className": ""
     },
     {
-        "id": "6fa71398859d95b1",
+        "id": "7d020a3ad97ef856",
         "type": "ui_spacer",
         "z": "e1f01e5e.1a3c4",
         "name": "spacer",
         "group": "fea83661.1ab498",
         "order": 4,
-        "width": 6,
+        "width": 7,
         "height": 1
     },
     {
-        "id": "0ef81099c358ad5a",
+        "id": "687a6001e05219b9",
         "type": "ui_spacer",
         "z": "e1f01e5e.1a3c4",
         "name": "spacer",
         "group": "fea83661.1ab498",
-        "order": 6,
-        "width": 6,
+        "order": 7,
+        "width": 7,
         "height": 1
     },
     {
@@ -707,7 +730,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv_open_gripper",
+        "url": "http://localhost:5014/emotiv/gripper/open",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -731,7 +754,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv_close_gripper",
+        "url": "http://localhost:5014/emotiv/gripper/close",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -891,7 +914,7 @@
         "type": "Profile-Name",
         "z": "912b42b3010b057f",
         "name": "Profile Name",
-        "profileName": "1.5 close fists",
+        "profileName": "gripper control",
         "x": 320,
         "y": 120,
         "wires": [
@@ -1101,9 +1124,9 @@
         "g": "71dedeec6942bbbe",
         "name": "Send Neutral Command",
         "method": "POST",
-        "ret": "obj",
+        "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv_input",
+        "url": "http://172.20.237.203:5014/emotiv/neutral",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1124,9 +1147,9 @@
         "g": "71dedeec6942bbbe",
         "name": "Send Push Command",
         "method": "POST",
-        "ret": "obj",
+        "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv/gripper/close",
+        "url": "http://172.20.237.203:5014/emotiv/gripper/close",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1147,9 +1170,9 @@
         "g": "71dedeec6942bbbe",
         "name": "Send Pull Command",
         "method": "POST",
-        "ret": "obj",
+        "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv/gripper/open",
+        "url": "http://172.20.237.203:5014/emotiv/gripper/open",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1346,15 +1369,15 @@
         "type": "function",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "magX",
-        "func": "msg.payload = {\n    magX: msg.payload,\n};\nreturn msg;",
+        "name": "accX",
+        "func": "msg.payload = {\n    accX: msg.payload,\n};\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
+        "x": 870,
         "y": 480,
         "wires": [
             [
@@ -1369,14 +1392,14 @@
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
         "name": "magZ",
-        "func": "msg.payload = {\n    magZ: msg.payload,\n};\nreturn msg;",
+        "func": "msg.payload = {\n    accZ: msg.payload,\n};\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
+        "x": 870,
         "y": 680,
         "wires": [
             [
@@ -1391,14 +1414,14 @@
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
         "name": "magY",
-        "func": "msg.payload = {\n    magY: msg.payload,\n};\nreturn msg;",
+        "func": "msg.payload = {\n    accY: msg.payload,\n};\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
+        "x": 870,
         "y": 580,
         "wires": [
             [
@@ -1428,6 +1451,7 @@
         "id": "0c9eb6bc16bf9262",
         "type": "Mental-Command",
         "z": "e1f01e5e.1a3c4",
+        "d": true,
         "g": "2078d95306bd476a",
         "name": "MC",
         "actionName": "push",
@@ -1445,6 +1469,7 @@
         "id": "3e86151e432194bb",
         "type": "Mental-Command",
         "z": "e1f01e5e.1a3c4",
+        "d": true,
         "g": "2078d95306bd476a",
         "name": "MC",
         "actionName": "pull",
@@ -1464,8 +1489,8 @@
         "z": "e1f01e5e.1a3c4",
         "g": "a12fd97fea4d5139",
         "name": "MS",
-        "metric": "7",
-        "x": 600,
+        "metric": "4",
+        "x": 590,
         "y": 580,
         "wires": [
             [
@@ -1480,7 +1505,7 @@
         "z": "e1f01e5e.1a3c4",
         "g": "a12fd97fea4d5139",
         "name": "MS",
-        "metric": "8",
+        "metric": "5",
         "x": 590,
         "y": 640,
         "wires": [
@@ -1495,8 +1520,8 @@
         "z": "e1f01e5e.1a3c4",
         "g": "a12fd97fea4d5139",
         "name": "MS",
-        "metric": "6",
-        "x": 600,
+        "metric": "3",
+        "x": 590,
         "y": 520,
         "wires": [
             [
@@ -1541,6 +1566,7 @@
         "id": "265955259ed79492",
         "type": "link out",
         "z": "e1f01e5e.1a3c4",
+        "d": true,
         "g": "2078d95306bd476a",
         "name": "Dashboard Push",
         "mode": "link",
@@ -1574,6 +1600,7 @@
         "id": "0b2881b0e92765b1",
         "type": "link out",
         "z": "e1f01e5e.1a3c4",
+        "d": true,
         "g": "2078d95306bd476a",
         "name": "Dashboard Pull",
         "mode": "link",
@@ -1608,11 +1635,11 @@
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "Send magX",
+        "name": "Send accX",
         "method": "POST",
-        "ret": "obj",
+        "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv/magnetometer/X",
+        "url": "http://172.20.237.203:5014/emotiv/acceleration/x",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1620,7 +1647,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1030,
+        "x": 1010,
         "y": 500,
         "wires": [
             []
@@ -1640,7 +1667,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1010,
+        "x": 990,
         "y": 460,
         "wires": []
     },
@@ -1649,11 +1676,11 @@
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "Send magyY",
+        "name": "Send accY",
         "method": "POST",
-        "ret": "obj",
+        "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv/magnetometer/Y",
+        "url": "http://172.20.237.203:5014/emotiv/acceleration/y",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1661,7 +1688,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1030,
+        "x": 1010,
         "y": 600,
         "wires": [
             []
@@ -1681,7 +1708,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1010,
+        "x": 990,
         "y": 560,
         "wires": []
     },
@@ -1690,11 +1717,11 @@
         "type": "http request",
         "z": "e1f01e5e.1a3c4",
         "g": "ce1a6da7223e9e9f",
-        "name": "Send magZ",
+        "name": "Send accZ",
         "method": "POST",
-        "ret": "obj",
+        "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:5014/emotiv/magnetometer/Z",
+        "url": "http://172.20.237.203:5014/emotiv/acceleration/z",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1702,7 +1729,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1030,
+        "x": 1010,
         "y": 700,
         "wires": [
             []
@@ -1722,7 +1749,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1010,
+        "x": 990,
         "y": 660,
         "wires": []
     },
@@ -1734,9 +1761,10 @@
         "name": "magY",
         "mode": "link",
         "links": [
-            "db996083278e494c"
+            "db996083278e494c",
+            "959f04cee26a69ee"
         ],
-        "x": 755,
+        "x": 735,
         "y": 580,
         "wires": [],
         "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
@@ -1750,8 +1778,8 @@
         "links": [
             "769ba4978010f827"
         ],
-        "x": 1195,
-        "y": 580,
+        "x": 1165,
+        "y": 560,
         "wires": [
             [
                 "b08cae830129419c"
@@ -1766,7 +1794,7 @@
         "g": "45533d472c436ec0",
         "group": "fea83661.1ab498",
         "order": 5,
-        "width": 6,
+        "width": 2,
         "height": 1,
         "name": "",
         "label": "Head tilt",
@@ -1777,8 +1805,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1410,
-        "y": 580,
+        "x": 1380,
+        "y": 560,
         "wires": []
     },
     {
@@ -1787,19 +1815,111 @@
         "z": "e1f01e5e.1a3c4",
         "g": "45533d472c436ec0",
         "name": "Tilt",
-        "func": "let magY = msg.payload;\n\nlet tilt = \"center\";\n\nif (magY < 8110) {\n    tilt = \"left\";\n} else if (magY > 8190) {\n    tilt = \"right\";\n}\n\nmsg.payload = tilt;\nreturn msg;",
+        "func": "let accY = msg.payload;\n\nlet tilt = \"center\";\n\nif (accY < 7500) {\n    tilt = \"left\";\n} else if (accY > 8500) {\n    tilt = \"right\";\n}\n\nmsg.payload = tilt;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1280,
-        "y": 580,
+        "x": 1250,
+        "y": 560,
         "wires": [
             [
                 "466a6a0ab381ade6"
             ]
         ]
+    },
+    {
+        "id": "cd013d53bb8f7ca4",
+        "type": "inject",
+        "z": "e1f01e5e.1a3c4",
+        "g": "831ddf5fbc91a672",
+        "name": "Close gripper",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "push",
+        "payloadType": "str",
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "33351957ffbdbf20"
+            ]
+        ]
+    },
+    {
+        "id": "91385728185e65c2",
+        "type": "inject",
+        "z": "e1f01e5e.1a3c4",
+        "g": "831ddf5fbc91a672",
+        "name": "Open gripper",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "pull",
+        "payloadType": "str",
+        "x": 310,
+        "y": 300,
+        "wires": [
+            [
+                "b0a745e0549fa80c"
+            ]
+        ]
+    },
+    {
+        "id": "85cea2cdd1e13d4e",
+        "type": "ui_text",
+        "z": "e1f01e5e.1a3c4",
+        "g": "45533d472c436ec0",
+        "group": "fea83661.1ab498",
+        "order": 6,
+        "width": 2,
+        "height": 1,
+        "name": "",
+        "label": "value",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1370,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "959f04cee26a69ee",
+        "type": "link in",
+        "z": "e1f01e5e.1a3c4",
+        "g": "45533d472c436ec0",
+        "name": "magY",
+        "links": [
+            "769ba4978010f827"
+        ],
+        "x": 1165,
+        "y": 600,
+        "wires": [
+            [
+                "85cea2cdd1e13d4e"
+            ]
+        ],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
     }
 ]
