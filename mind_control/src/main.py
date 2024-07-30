@@ -8,6 +8,7 @@ from flask import Flask, request # Create a web server receiving HTTP POST reque
 import logging                   # Suppress Flask logging messages
 from tqdm import tqdm            # Show progress bars
 import threading
+import csv
 
 # Configure logging
 log = logging.getLogger('werkzeug')
@@ -21,12 +22,12 @@ NODE_NAME = 'mind_control'
 
 # Variables and Constants
 lock = threading.Lock()  # Lock for synchronization
-gripper_state = {'left': None, 'right': None}
+gripper_state = {'left_arm': None, 'right_arm': None}
 initial_timestamp = None
 GRIPPER_CLOSE_POSE = 0.0
 GRIPPER_OPEN_POSE = 0.09
 TOLERANCE = 0.01
-tilt = "center"
+tilt = "both_arm"
 MAX_BUILD = 50 # Threshold for triggering an action based on received inputs
 prev_time = None
 openning = 0
@@ -63,7 +64,7 @@ wait_for_controller(gripper_r_pub)
 
 def check_gripper_position(joint_name, target_position):
     global gripper_state
-    state = gripper_state.get('left') if joint_name in GRIPPER_L_NAMES else gripper_state.get('right')
+    state = gripper_state.get('left_arm') if joint_name in GRIPPER_L_NAMES else gripper_state.get('right_arm')
 
     if state:
         actual_position = state.actual.positions[0]
@@ -91,7 +92,7 @@ def move_gripper(position):
         traj_left.points = [p]
         traj_right.points = [p]
 
-        if current_tilt == "center":
+        if current_tilt == "both_arm":
             gripper_l_pub.publish(traj_left)
             gripper_r_pub.publish(traj_right)
 
@@ -102,14 +103,14 @@ def move_gripper(position):
             while not check_gripper_position('gripper_right_finger_joint', position):
                 rospy.sleep(0.1)
 
-        elif current_tilt == "left":
+        elif current_tilt == "left_arm":
             gripper_l_pub.publish(traj_left)
 
             # Wait for gripper to reach the target position
             while not check_gripper_position('gripper_left_finger_joint', position):
                 rospy.sleep(0.1)
 
-        elif current_tilt == "right":
+        elif current_tilt == "right_arm":
             gripper_r_pub.publish(traj_right)
 
             # Wait for gripper to reach the target position
@@ -121,6 +122,31 @@ def format_duration(duration):
     minutes, seconds = divmod(remainder, 60)
     milliseconds = duration.microseconds // 1000
     return f'{int(hours)}h {int(minutes)}m {int(seconds)}s {milliseconds}ms'
+
+def log_result(initial_timestamp, end_timestamp, duration, tilt):
+    fieldnames = ['Start time', 'End time', 'Duration', 'Arm controlled', 'Success <= 15s', 'Action performed correctly']
+    
+    # Open the file in append mode
+    with open('gripper_action_log.csv', mode='a', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        
+        # Write header only if file is empty
+        file_empty = file.tell() == 0
+        if file_empty:
+            writer.writeheader()
+
+        # Check if the duration is within the threshold of 15 seconds
+        threshold_succeeded = duration.total_seconds() <= 15
+
+        # Write the log entry
+        writer.writerow({
+            'initial_timestamp': initial_timestamp,
+            'end_timestamp': end_timestamp,
+            'duration': duration,
+            'tilt': tilt,
+            'threshold_succeeded': threshold_succeeded,
+            'action_performed_correctly': ''  # Leave this empty for manual input
+        })
 
 ## Flask Web Server Endpoints
 # Node-RED input data from the Emotiv headset
@@ -166,10 +192,15 @@ def handle_open_gripper():
                 openning = 0
                 rospy.loginfo(f'[{time_now}] Signal received, opening gripper...')
                 move_gripper(GRIPPER_OPEN_POSE)
+                end_timestamp = datetime.now(timezone.utc)
                 duration = datetime.now(timezone.utc) - initial_timestamp
                 formatted_duration = format_duration(duration)
-                print(f'Gripper opened at {datetime.now(timezone.utc)} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}')
-                return f'Gripper opened at {datetime.now(timezone.utc)} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}', 200
+                print(f'Gripper opened at {end_timestamp} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}')
+
+                # Log the result
+                log_result(initial_timestamp, end_timestamp, formatted_duration, tilt)
+
+                return f'Gripper opened at {end_timestamp} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}', 200
 
         return 'Progressing', 200
 
@@ -214,10 +245,15 @@ def handle_close_gripper():
                 closing = 0
                 rospy.loginfo(f'[{time_now}] Signal received, closing gripper...')
                 move_gripper(GRIPPER_CLOSE_POSE)
+                end_timestamp = datetime.now(timezone.utc)
                 duration = datetime.now(timezone.utc) - initial_timestamp
                 formatted_duration = format_duration(duration)
-                print(f'Gripper closed at {datetime.now(timezone.utc)} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}')
-                return f'Gripper closed at {datetime.now(timezone.utc)} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}', 200
+                print(f'Gripper closed at {end_timestamp} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}')
+
+                # Log the result
+                log_result(initial_timestamp, end_timestamp, formatted_duration, tilt)
+
+                return f'Gripper closed at {end_timestamp} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}', 200
 
         return 'Progressing', 200
 
@@ -242,11 +278,11 @@ def accelerationY():
     #print(f'Acceleration Y data received: {accY}')
 
     # Determine tilt direction to control both arms, the left or right one
-    tilt = "center"
+    tilt = "both_arm"
     if accY < 7500:
-        tilt = "left"
+        tilt = "left_arm"
     elif accY > 8500:
-        tilt = "right"
+        tilt = "right_arm"
     #print(f'Tilt direction set to: {tilt}')
 
     return f'Acceleration Y data received, tilt direction set to: {tilt}', 200
