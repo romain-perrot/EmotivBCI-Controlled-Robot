@@ -11,28 +11,36 @@ This project involves the setup, simulation, and control of the TIAGo++ robot us
 - [Troubleshooting](docs/TROUBLESHOOTING.md): Get help with common issues and solutions.
 - [References](docs/REFERENCES.md): Find additional resources and documentation.
 
-## Running Project
+## Running the Project
 
 To test the project, follow these steps:
 
-1. Open an Ubuntu terminal and source the workspace:
+1. Connect the Emotiv Epoch+ headset to the laptop
+
+2. Open an Ubuntu terminal and source the workspace:
    ```bash
    cd /tiago_dual_public_ws/
    source ./devel/setup.bash
    ```
 
-2. Still in an Ubuntu terminal, launch the simulation:
-   ```bash
-   roslaunch tiago_dual_gazebo tiago_dual_gazebo.launch public_sim:=true end_effector_left:=pal-gripper end_effector_right:=pal-gripper
-   ```
-
-3. In a cmd terminal, launch:
-   - NODE-Red flows:
+3. Still in an Ubuntu terminal, launch:
+   - the simulation:
+     <img align="right" height="100" src="images/tiago_simulation.png">
       ```bash
-      node-red
+      roslaunch tiago_dual_gazebo tiago_dual_gazebo.launch public_sim:=true end_effector_left:=pal-gripper end_effector_right:=pal-gripper
       ```
 
    - main program:
       ```bash
       python3 main.py
       ```
+      
+4. In a cmd terminal, launch NODE-Red flows:
+   ```bash
+   node-red
+   ```
+
+5. This flow enables the integration of mental commands from the Emotiv BCI with ROS, allowing for intuitive control of robotic components such as a gripper. The dashboard provides a visual representation of the commands and sensor data, facilitating monitoring and debugging.
+
+   ![TIAGO Simulation](images/emotiv_bci_to_ros.png)
+   ![TIAGO Simulation](images/emotiv_bci_to_ros_dashboard.png)
