@@ -8,6 +8,7 @@ This project involves the setup, simulation, and control of the TIAGo++ robot us
 
 - [README](../README.md): Read the project's presentation
 - [Installation Guide](docs/INSTALLATION.md): Follow detailed instructions for setting up the development environment, including ROS, Node-RED, and other dependencies.
+- [Explanation](docs/EXPLANATION.md): Detail the functionnalities of the project
 - [Troubleshooting](docs/TROUBLESHOOTING.md): Get help with common issues and solutions.
 - [References](docs/REFERENCES.md): Find additional resources and documentation.
 
