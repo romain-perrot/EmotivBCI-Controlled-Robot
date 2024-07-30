@@ -16,6 +16,10 @@ This project focuses on developing a BCI-controlled robotic assistant using the 
 - `mind_control/`: Contains the source code for controlling the TIAGo++ robot.
 - `flows.json`: Node-RED flow configuration file.
 
+<p align="center">
+  <img src="docs/images/project_diagram.png">
+</p>
+
 ## Getting Started
 
 To get started, follow the [Installation Guide](docs/INSTALLATION.md) to set up your environment. Once installed, you can refer to the [Usage Guide](docs/USAGE.md) for instructions on running the project and controlling the robot.
