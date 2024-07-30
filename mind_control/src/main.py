@@ -72,7 +72,7 @@ def check_gripper_position(joint_name, target_position):
     return False
 
 def move_gripper(position):
-    global gripper_l_pub, gripper_r_pub, tilt
+    global gripper_l_pub, gripper_r_pub, tilt, current_tilt
 
     with lock:
         current_tilt = tilt
@@ -116,6 +116,8 @@ def move_gripper(position):
             # Wait for gripper to reach the target position
             while not check_gripper_position('gripper_right_finger_joint', position):
                 rospy.sleep(0.1)
+            
+        return current_tilt
 
 def format_duration(duration):
     hours, remainder = divmod(duration.total_seconds(), 3600)
@@ -123,9 +125,12 @@ def format_duration(duration):
     milliseconds = duration.microseconds // 1000
     return f'{int(hours)}h {int(minutes)}m {int(seconds)}s {milliseconds}ms'
 
-def log_result(initial_timestamp, end_timestamp, duration, tilt):
-    fieldnames = ['Start time', 'End time', 'Duration', 'Arm controlled', 'Success <= 15s', 'Action performed correctly']
-    
+def log_result(initial_timestamp, end_timestamp, duration, action_tilt):
+    fieldnames = ['Start time', 'End time', 'Duration', 'Arm controlled', 'Success <= 15s', 'Accuracy', 'Error rate']
+
+    # Command Accuracy: Track how often the robot correctly interprets and executes the commands as intended. Accuracy = Total Number of Predictions/Number of Correct Predictions × 100
+    # Error Rate: Calculate the percentage of incorrect actions taken by the robot. Error rate = 100 - Accuracy
+
     # Open the file in append mode
     with open('gripper_action_log.csv', mode='a', newline='') as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
@@ -140,12 +145,13 @@ def log_result(initial_timestamp, end_timestamp, duration, tilt):
 
         # Write the log entry
         writer.writerow({
-            'initial_timestamp': initial_timestamp,
-            'end_timestamp': end_timestamp,
-            'duration': duration,
-            'tilt': tilt,
-            'threshold_succeeded': threshold_succeeded,
-            'action_performed_correctly': ''  # Leave this empty for manual input
+            'Start time': initial_timestamp,
+            'End time': end_timestamp,
+            'Duration': duration,
+            'Arm controlled': action_tilt,
+            'Success <= 15s': threshold_succeeded,
+            'Accuracy': '',  # Leave this empty for manual input
+            'Error rate': ''  # Leave this empty for manual input
         })
 
 ## Flask Web Server Endpoints
@@ -191,14 +197,14 @@ def handle_open_gripper():
             if openning == MAX_BUILD:
                 openning = 0
                 rospy.loginfo(f'[{time_now}] Signal received, opening gripper...')
-                move_gripper(GRIPPER_OPEN_POSE)
+                action_tilt = move_gripper(GRIPPER_OPEN_POSE)
                 end_timestamp = datetime.now(timezone.utc)
                 duration = datetime.now(timezone.utc) - initial_timestamp
                 formatted_duration = format_duration(duration)
                 print(f'Gripper opened at {end_timestamp} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}')
 
                 # Log the result
-                log_result(initial_timestamp, end_timestamp, formatted_duration, tilt)
+                log_result(initial_timestamp, end_timestamp, formatted_duration, action_tilt)
 
                 return f'Gripper opened at {end_timestamp} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}', 200
 
@@ -244,14 +250,14 @@ def handle_close_gripper():
             if closing == MAX_BUILD:
                 closing = 0
                 rospy.loginfo(f'[{time_now}] Signal received, closing gripper...')
-                move_gripper(GRIPPER_CLOSE_POSE)
+                action_tilt = move_gripper(GRIPPER_CLOSE_POSE)
                 end_timestamp = datetime.now(timezone.utc)
                 duration = datetime.now(timezone.utc) - initial_timestamp
                 formatted_duration = format_duration(duration)
                 print(f'Gripper closed at {end_timestamp} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}')
 
                 # Log the result
-                log_result(initial_timestamp, end_timestamp, formatted_duration, tilt)
+                log_result(initial_timestamp, end_timestamp, formatted_duration, action_tilt)
 
                 return f'Gripper closed at {end_timestamp} with starting time at: {initial_timestamp}. Action duration: {formatted_duration}', 200
 
