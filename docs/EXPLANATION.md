@@ -41,3 +41,17 @@ This Node-RED flow integrates the Emotiv Brain-Computer Interface (BCI) with the
   - Tilt node: This node processes tilt data.
 
   - Head tilt and value nodes: These nodes display the head tilt data on the dashboard.
+
+## Other flows for testing
+
+<p align="center">
+  <img src="images/test_headset.png">
+  <br><br>
+  <img src="images/test_emotiv_to_node-red.png">
+  <br><br>
+  <img src="images/test_node-red_to_ros.png">
+  <br><br>
+  <img src="images/test_2_mental_commands_and_neutral.png">
+</p>
+
+These flows are just used to test the connection between all the project's components.
