@@ -42,5 +42,5 @@ To test the project, follow these steps:
 
 5. This flow enables the integration of mental commands from the Emotiv BCI with ROS, allowing for intuitive control of robotic components such as a gripper. The dashboard provides a visual representation of the commands and sensor data, facilitating monitoring and debugging.
 
-   ![TIAGO Simulation](images/emotiv_bci_to_ros.png)
+   ![TIAGO Simulation](images/emotiv_bci_to_ros_flow.png)
    ![TIAGO Simulation](images/emotiv_bci_to_ros_dashboard.png)
