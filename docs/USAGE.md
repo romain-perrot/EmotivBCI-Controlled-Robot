@@ -15,7 +15,7 @@ This project involves the setup, simulation, and control of the TIAGo++ robot us
 
 To test the project, follow these steps:
 
-1. Connect the Emotiv Epoch+ headset to the laptop
+1. Connect the Emotiv headset to your laptop.
 
 2. Open an Ubuntu terminal and source the workspace:
    ```bash
@@ -40,7 +40,7 @@ To test the project, follow these steps:
    node-red
    ```
 
-5. This flow enables the integration of mental commands from the Emotiv BCI with ROS, allowing for intuitive control of robotic components such as a gripper. The dashboard provides a visual representation of the commands and sensor data, facilitating monitoring and debugging.
+5. This flow enables the integration of mental commands from the Emotiv BCI with ROS, allowing for intuitive control of robotic components such as a gripper. The dashboard provides a visual representation of the commands and sensor data, facilitating monitoring and debugging. (The other flows are just for testing functionnalities).
 
    ![TIAGO Simulation](images/emotiv_bci_to_ros_flow.png)
    ![TIAGO Simulation](images/emotiv_bci_to_ros_dashboard.png)
