@@ -4,9 +4,9 @@ import rospy
 import trajectory_msgs.msg
 from control_msgs.msg import JointTrajectoryControllerState
 from datetime import datetime, timezone
-from flask import Flask, request # Create a web server receiving HTTP POST requests
-import logging                   # Suppress Flask logging messages
-from tqdm import tqdm            # Show progress bars
+from flask import Flask, request, jsonify   # Create a web server receiving HTTP POST requests
+import logging                              # Suppress Flask logging messages
+from tqdm import tqdm                       # Show progress bars
 import threading
 import csv
 
@@ -21,14 +21,15 @@ app = Flask(__name__)
 NODE_NAME = 'mind_control'
 
 # Variables and Constants
-lock = threading.Lock()  # Lock for synchronization
+MAX_BUILD = 50 # Threshold for triggering an action based on received inputs
 gripper_state = {'left_arm': None, 'right_arm': None}
+lock = threading.Lock()  # Lock for synchronization
 initial_timestamp = None
 GRIPPER_CLOSE_POSE = 0.0
 GRIPPER_OPEN_POSE = 0.09
+PRECISION = 0.001
 TOLERANCE = 0.01
 tilt = "both_arm"
-MAX_BUILD = 50 # Threshold for triggering an action based on received inputs
 prev_time = None
 openning = 0
 closing = 0
@@ -128,8 +129,9 @@ def format_duration(duration):
 def log_result(initial_timestamp, end_timestamp, duration, action_tilt):
     fieldnames = ['Start time', 'End time', 'Duration', 'Arm controlled', 'Success <= 15s', 'Accuracy', 'Error rate']
 
-    # Command Accuracy: Track how often the robot correctly interprets and executes the commands as intended. Accuracy = Total Number of Predictions/Number of Correct Predictions × 100
-    # Error Rate: Calculate the percentage of incorrect actions taken by the robot. Error rate = 100 - Accuracy
+    # Command Accuracy: Track how often the robot correctly interprets and executes the commands as intended.
+    # Accuracy = Total Number of Predictions/Number of Correct Predictions × 100
+    # Error Rate: Calculate the percentage of incorrect actions taken by the robot.
 
     # Open the file in append mode
     with open('gripper_action_log.csv', mode='a', newline='') as file:
@@ -266,6 +268,37 @@ def handle_close_gripper():
     except Exception as e:
         logging.error(f"Error in /emotiv/gripper/close endpoint: {e}", exc_info=True)
         return 'Error', 500
+
+# Incremental control
+@app.route('/emotiv/gripper/increment', methods=['POST'])
+def increment_gripper():
+    global current_gripper_position
+
+    try:
+        increment = float(request.args.get('value', PRECISION))
+        new_position = min(current_gripper_position + increment, GRIPPER_OPEN_POSE)
+        move_gripper(new_position)
+        current_gripper_position = new_position
+        return jsonify({'status': 'success', 'new_position': new_position}), 200
+
+    except Exception as e:
+        logging.error(f"Error in /emotiv/gripper/increment endpoint: {e}", exc_info=True)
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
+@app.route('/emotiv/gripper/decrement', methods=['POST'])
+def decrement_gripper():
+    global current_gripper_position
+
+    try:
+        decrement = float(request.args.get('value', PRECISION))
+        new_position = max(current_gripper_position - decrement, GRIPPER_CLOSE_POSE)
+        move_gripper(new_position)
+        current_gripper_position = new_position
+        return jsonify({'status': 'success', 'new_position': new_position}), 200
+
+    except Exception as e:
+        logging.error(f"Error in /emotiv/gripper/decrement endpoint: {e}", exc_info=True)
+        return jsonify({'status': 'error', 'message': str(e)}), 500
 
 # Acceleration data
 @app.route('/emotiv/acceleration/x', methods=['POST'])
