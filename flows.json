@@ -467,7 +467,7 @@
         ],
         "x": 14,
         "y": 19,
-        "w": 452,
+        "w": 472,
         "h": 322
     },
     {
@@ -514,7 +514,7 @@
             "ce28e374ee95b6b1",
             "13f80ce380ee1f87"
         ],
-        "x": 1034,
+        "x": 1014,
         "y": 119,
         "w": 372,
         "h": 122
@@ -543,7 +543,7 @@
             "37319766fce5a132",
             "8e8b21843f2c6e72"
         ],
-        "x": 834,
+        "x": 534,
         "y": 359,
         "w": 312,
         "h": 322
@@ -567,9 +567,9 @@
             "291f2e620a56b7eb",
             "d254aca011280314"
         ],
-        "x": 494,
+        "x": 204,
         "y": 419,
-        "w": 322,
+        "w": 312,
         "h": 202
     },
     {
@@ -594,31 +594,10 @@
             "971ffbe4634df473",
             "5b69b17d7e40f455"
         ],
-        "x": 1164,
+        "x": 854,
         "y": 419,
         "w": 342,
         "h": 162
-    },
-    {
-        "id": "7ccaff80c1e92082",
-        "type": "group",
-        "z": "532ded640d221b98",
-        "name": "Emotiv Profile",
-        "style": {
-            "fill-opacity": "0.25",
-            "label": true,
-            "label-position": "n",
-            "color": "#000000",
-            "stroke": "#EBA4C0",
-            "fill": "#EBA4C0"
-        },
-        "nodes": [
-            "3af2f5f29daf9478"
-        ],
-        "x": 194,
-        "y": 479,
-        "w": 252,
-        "h": 82
     },
     {
         "id": "fea83661.1ab498",
@@ -3012,7 +2991,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1140,
+        "x": 1120,
         "y": 180,
         "wires": [
             [
@@ -3035,7 +3014,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1300,
+        "x": 1280,
         "y": 160,
         "wires": []
     },
@@ -3075,7 +3054,9 @@
                 "d807d5dee38fe972",
                 "029ce096c3aa7171",
                 "40e1891a2968604a",
-                "3af2f5f29daf9478"
+                "7f7ade1f1cbdd872",
+                "04d67ba9451342b6",
+                "291f2e620a56b7eb"
             ]
         ]
     },
@@ -3088,7 +3069,7 @@
         "freq": "1",
         "headset": "EPOC+",
         "sensor": 0,
-        "x": 320,
+        "x": 340,
         "y": 60,
         "wires": [
             [
@@ -3105,7 +3086,7 @@
         "freq": "2",
         "headset": "EPOC+",
         "sensor": 0,
-        "x": 320,
+        "x": 340,
         "y": 120,
         "wires": [
             [
@@ -3122,7 +3103,7 @@
         "freq": "3",
         "headset": "EPOC+",
         "sensor": 0,
-        "x": 320,
+        "x": 340,
         "y": 180,
         "wires": [
             [
@@ -3139,7 +3120,7 @@
         "freq": "4",
         "headset": "EPOC+",
         "sensor": 0,
-        "x": 320,
+        "x": 340,
         "y": 240,
         "wires": [
             [
@@ -3156,7 +3137,7 @@
         "freq": "0",
         "headset": "EPOC+",
         "sensor": 0,
-        "x": 320,
+        "x": 340,
         "y": 300,
         "wires": [
             [
@@ -3282,7 +3263,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
+        "x": 610,
         "y": 420,
         "wires": [
             [
@@ -3304,7 +3285,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
+        "x": 610,
         "y": 520,
         "wires": [
             [
@@ -3326,7 +3307,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
+        "x": 610,
         "y": 620,
         "wires": [
             [
@@ -3352,7 +3333,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1050,
+        "x": 750,
         "y": 440,
         "wires": [
             []
@@ -3372,7 +3353,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1030,
+        "x": 730,
         "y": 400,
         "wires": []
     },
@@ -3393,7 +3374,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1050,
+        "x": 750,
         "y": 540,
         "wires": [
             []
@@ -3413,7 +3394,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1030,
+        "x": 730,
         "y": 500,
         "wires": []
     },
@@ -3431,7 +3412,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1030,
+        "x": 730,
         "y": 600,
         "wires": []
     },
@@ -3452,7 +3433,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1050,
+        "x": 750,
         "y": 640,
         "wires": [
             []
@@ -3465,7 +3446,7 @@
         "g": "ca97725123e6bb54",
         "name": "MS",
         "metric": "3",
-        "x": 630,
+        "x": 340,
         "y": 460,
         "wires": [
             [
@@ -3480,7 +3461,7 @@
         "g": "ca97725123e6bb54",
         "name": "MS",
         "metric": "4",
-        "x": 630,
+        "x": 340,
         "y": 520,
         "wires": [
             [
@@ -3496,7 +3477,7 @@
         "g": "ca97725123e6bb54",
         "name": "MS",
         "metric": "5",
-        "x": 630,
+        "x": 340,
         "y": 580,
         "wires": [
             [
@@ -3515,7 +3496,7 @@
             "c33358094e63486c",
             "9e592ac0c7620ba1"
         ],
-        "x": 775,
+        "x": 475,
         "y": 520,
         "wires": [],
         "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
@@ -3529,7 +3510,7 @@
         "links": [
             "d254aca011280314"
         ],
-        "x": 1205,
+        "x": 895,
         "y": 500,
         "wires": [
             [
@@ -3551,7 +3532,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1290,
+        "x": 980,
         "y": 500,
         "wires": [
             [
@@ -3577,7 +3558,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1420,
+        "x": 1110,
         "y": 500,
         "wires": []
     },
@@ -3599,7 +3580,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1410,
+        "x": 1100,
         "y": 540,
         "wires": []
     },
@@ -3612,7 +3593,7 @@
         "links": [
             "d254aca011280314"
         ],
-        "x": 1205,
+        "x": 895,
         "y": 540,
         "wires": [
             [
@@ -3639,7 +3620,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1420,
+        "x": 1110,
         "y": 460,
         "wires": []
     },
@@ -3652,7 +3633,7 @@
         "links": [
             "13f80ce380ee1f87"
         ],
-        "x": 1205,
+        "x": 895,
         "y": 460,
         "wires": [
             [
@@ -3671,26 +3652,9 @@
         "links": [
             "5b69b17d7e40f455"
         ],
-        "x": 1255,
+        "x": 1235,
         "y": 200,
         "wires": [],
         "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
-    },
-    {
-        "id": "3af2f5f29daf9478",
-        "type": "Profile-Name",
-        "z": "532ded640d221b98",
-        "g": "7ccaff80c1e92082",
-        "name": "Profile",
-        "profileName": "gripper control",
-        "x": 320,
-        "y": 520,
-        "wires": [
-            [
-                "7f7ade1f1cbdd872",
-                "04d67ba9451342b6",
-                "291f2e620a56b7eb"
-            ]
-        ]
     }
 ]
