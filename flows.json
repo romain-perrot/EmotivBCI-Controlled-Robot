@@ -448,7 +448,7 @@
         "id": "23345d065b25b516",
         "type": "group",
         "z": "532ded640d221b98",
-        "name": "Emotiv Frequency Band Powers",
+        "name": "Emotiv",
         "style": {
             "label": true,
             "stroke": "#EBA4C0",
@@ -459,16 +459,13 @@
         },
         "nodes": [
             "f6a2822f6bb32972",
-            "612e10072c172836",
-            "07c65f44e58cb796",
-            "d807d5dee38fe972",
-            "029ce096c3aa7171",
-            "40e1891a2968604a"
+            "ca97725123e6bb54",
+            "53e7d1471d37908a"
         ],
         "x": 14,
-        "y": 19,
-        "w": 472,
-        "h": 322
+        "y": 13,
+        "w": 538,
+        "h": 674
     },
     {
         "id": "c3cb24deda0c74f5",
@@ -491,8 +488,8 @@
             "677d4483590db3ec",
             "b0bb8c1036a2741a"
         ],
-        "x": 494,
-        "y": 19,
+        "x": 574,
+        "y": 39,
         "w": 512,
         "h": 322
     },
@@ -514,8 +511,8 @@
             "ce28e374ee95b6b1",
             "13f80ce380ee1f87"
         ],
-        "x": 1014,
-        "y": 119,
+        "x": 1114,
+        "y": 139,
         "w": 372,
         "h": 122
     },
@@ -543,8 +540,8 @@
             "37319766fce5a132",
             "8e8b21843f2c6e72"
         ],
-        "x": 534,
-        "y": 359,
+        "x": 574,
+        "y": 399,
         "w": 312,
         "h": 322
     },
@@ -552,6 +549,7 @@
         "id": "ca97725123e6bb54",
         "type": "group",
         "z": "532ded640d221b98",
+        "g": "23345d065b25b516",
         "name": "Motion Sensors",
         "style": {
             "label": true,
@@ -568,8 +566,8 @@
             "d254aca011280314"
         ],
         "x": 204,
-        "y": 419,
-        "w": 312,
+        "y": 459,
+        "w": 322,
         "h": 202
     },
     {
@@ -594,10 +592,36 @@
             "971ffbe4634df473",
             "5b69b17d7e40f455"
         ],
-        "x": 854,
-        "y": 419,
+        "x": 904,
+        "y": 459,
         "w": 342,
         "h": 162
+    },
+    {
+        "id": "53e7d1471d37908a",
+        "type": "group",
+        "z": "532ded640d221b98",
+        "g": "23345d065b25b516",
+        "name": "Frequency Band Power",
+        "style": {
+            "stroke": "#EBA4C0",
+            "fill": "#EBA4C0",
+            "fill-opacity": "0.25",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "612e10072c172836",
+            "07c65f44e58cb796",
+            "d807d5dee38fe972",
+            "029ce096c3aa7171",
+            "40e1891a2968604a"
+        ],
+        "x": 194,
+        "y": 39,
+        "w": 292,
+        "h": 322
     },
     {
         "id": "fea83661.1ab498",
@@ -2991,8 +3015,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1120,
-        "y": 180,
+        "x": 1220,
+        "y": 200,
         "wires": [
             [
                 "ce28e374ee95b6b1",
@@ -3014,8 +3038,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
-        "y": 160,
+        "x": 1380,
+        "y": 180,
         "wires": []
     },
     {
@@ -3031,8 +3055,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 60,
+        "x": 700,
+        "y": 80,
         "wires": [
             [
                 "b0bb8c1036a2741a"
@@ -3046,7 +3070,7 @@
         "g": "23345d065b25b516",
         "name": "EMOTIV",
         "x": 100,
-        "y": 180,
+        "y": 400,
         "wires": [
             [
                 "612e10072c172836",
@@ -3064,13 +3088,13 @@
         "id": "612e10072c172836",
         "type": "Frequency-Band-Power",
         "z": "532ded640d221b98",
-        "g": "23345d065b25b516",
+        "g": "53e7d1471d37908a",
         "name": "FBP",
         "freq": "1",
         "headset": "EPOC+",
         "sensor": 0,
         "x": 340,
-        "y": 60,
+        "y": 80,
         "wires": [
             [
                 "2e2f4dff9fee3669"
@@ -3081,13 +3105,13 @@
         "id": "07c65f44e58cb796",
         "type": "Frequency-Band-Power",
         "z": "532ded640d221b98",
-        "g": "23345d065b25b516",
+        "g": "53e7d1471d37908a",
         "name": "FBP",
         "freq": "2",
         "headset": "EPOC+",
         "sensor": 0,
         "x": 340,
-        "y": 120,
+        "y": 140,
         "wires": [
             [
                 "0d98de19a7bc912a"
@@ -3098,13 +3122,13 @@
         "id": "d807d5dee38fe972",
         "type": "Frequency-Band-Power",
         "z": "532ded640d221b98",
-        "g": "23345d065b25b516",
+        "g": "53e7d1471d37908a",
         "name": "FBP",
         "freq": "3",
         "headset": "EPOC+",
         "sensor": 0,
         "x": 340,
-        "y": 180,
+        "y": 200,
         "wires": [
             [
                 "b5b7acfa06fd132a"
@@ -3115,13 +3139,13 @@
         "id": "029ce096c3aa7171",
         "type": "Frequency-Band-Power",
         "z": "532ded640d221b98",
-        "g": "23345d065b25b516",
+        "g": "53e7d1471d37908a",
         "name": "FBP",
         "freq": "4",
         "headset": "EPOC+",
         "sensor": 0,
         "x": 340,
-        "y": 240,
+        "y": 260,
         "wires": [
             [
                 "109b184fc9c07bc9"
@@ -3132,13 +3156,13 @@
         "id": "40e1891a2968604a",
         "type": "Frequency-Band-Power",
         "z": "532ded640d221b98",
-        "g": "23345d065b25b516",
+        "g": "53e7d1471d37908a",
         "name": "FBP",
         "freq": "0",
         "headset": "EPOC+",
         "sensor": 0,
         "x": 340,
-        "y": 300,
+        "y": 320,
         "wires": [
             [
                 "677d4483590db3ec"
@@ -3158,8 +3182,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 120,
+        "x": 700,
+        "y": 140,
         "wires": [
             [
                 "b0bb8c1036a2741a"
@@ -3179,8 +3203,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 180,
+        "x": 700,
+        "y": 200,
         "wires": [
             [
                 "b0bb8c1036a2741a"
@@ -3200,8 +3224,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 240,
+        "x": 700,
+        "y": 260,
         "wires": [
             [
                 "b0bb8c1036a2741a"
@@ -3221,8 +3245,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 300,
+        "x": 700,
+        "y": 320,
         "wires": [
             [
                 "b0bb8c1036a2741a"
@@ -3242,8 +3266,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 880,
-        "y": 180,
+        "x": 960,
+        "y": 200,
         "wires": [
             [
                 "838004158d8f58c4"
@@ -3263,8 +3287,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 420,
+        "x": 650,
+        "y": 460,
         "wires": [
             [
                 "aaa46cf16abc6e49",
@@ -3285,8 +3309,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 520,
+        "x": 650,
+        "y": 560,
         "wires": [
             [
                 "fa199037ac2c50eb",
@@ -3307,8 +3331,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 620,
+        "x": 650,
+        "y": 660,
         "wires": [
             [
                 "37319766fce5a132",
@@ -3333,8 +3357,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 750,
-        "y": 440,
+        "x": 790,
+        "y": 480,
         "wires": [
             []
         ]
@@ -3353,8 +3377,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 730,
-        "y": 400,
+        "x": 770,
+        "y": 440,
         "wires": []
     },
     {
@@ -3374,8 +3398,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 750,
-        "y": 540,
+        "x": 790,
+        "y": 580,
         "wires": [
             []
         ]
@@ -3394,8 +3418,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 730,
-        "y": 500,
+        "x": 770,
+        "y": 540,
         "wires": []
     },
     {
@@ -3412,8 +3436,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 730,
-        "y": 600,
+        "x": 770,
+        "y": 640,
         "wires": []
     },
     {
@@ -3433,8 +3457,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 750,
-        "y": 640,
+        "x": 790,
+        "y": 680,
         "wires": [
             []
         ]
@@ -3447,7 +3471,7 @@
         "name": "MS",
         "metric": "3",
         "x": 340,
-        "y": 460,
+        "y": 500,
         "wires": [
             [
                 "3c046f59373e2dea"
@@ -3462,7 +3486,7 @@
         "name": "MS",
         "metric": "4",
         "x": 340,
-        "y": 520,
+        "y": 560,
         "wires": [
             [
                 "834ea361d1576dec",
@@ -3478,7 +3502,7 @@
         "name": "MS",
         "metric": "5",
         "x": 340,
-        "y": 580,
+        "y": 620,
         "wires": [
             [
                 "c7eea6bd7cd84d88"
@@ -3496,8 +3520,8 @@
             "c33358094e63486c",
             "9e592ac0c7620ba1"
         ],
-        "x": 475,
-        "y": 520,
+        "x": 485,
+        "y": 560,
         "wires": [],
         "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
     },
@@ -3510,8 +3534,8 @@
         "links": [
             "d254aca011280314"
         ],
-        "x": 895,
-        "y": 500,
+        "x": 945,
+        "y": 540,
         "wires": [
             [
                 "17a796a008e5047a"
@@ -3532,8 +3556,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
-        "y": 500,
+        "x": 1030,
+        "y": 540,
         "wires": [
             [
                 "c4ff2f28a4be56af"
@@ -3558,8 +3582,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1110,
-        "y": 500,
+        "x": 1160,
+        "y": 540,
         "wires": []
     },
     {
@@ -3580,8 +3604,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1100,
-        "y": 540,
+        "x": 1150,
+        "y": 580,
         "wires": []
     },
     {
@@ -3593,8 +3617,8 @@
         "links": [
             "d254aca011280314"
         ],
-        "x": 895,
-        "y": 540,
+        "x": 945,
+        "y": 580,
         "wires": [
             [
                 "466e4b63821e6371"
@@ -3620,8 +3644,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1110,
-        "y": 460,
+        "x": 1160,
+        "y": 500,
         "wires": []
     },
     {
@@ -3633,8 +3657,8 @@
         "links": [
             "13f80ce380ee1f87"
         ],
-        "x": 895,
-        "y": 460,
+        "x": 945,
+        "y": 500,
         "wires": [
             [
                 "971ffbe4634df473"
@@ -3652,8 +3676,8 @@
         "links": [
             "5b69b17d7e40f455"
         ],
-        "x": 1235,
-        "y": 200,
+        "x": 1335,
+        "y": 220,
         "wires": [],
         "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
     }
