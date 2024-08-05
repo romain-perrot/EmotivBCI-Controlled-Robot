@@ -32,16 +32,16 @@
         "env": []
     },
     {
-        "id": "e1f01e5e.1a3c4",
+        "id": "e2f4ed605471f537",
         "type": "tab",
-        "label": "Emotiv BCI to ROS",
+        "label": "EEG Data Collection",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "e2f4ed605471f537",
+        "id": "e1f01e5e.1a3c4",
         "type": "tab",
-        "label": "EEG Data Collection",
+        "label": "Emotiv BCI to ROS",
         "disabled": false,
         "info": ""
     },
@@ -399,7 +399,7 @@
         ],
         "x": 1014,
         "y": 259,
-        "w": 1152,
+        "w": 1232,
         "h": 122
     },
     {
@@ -445,6 +445,182 @@
         "h": 82
     },
     {
+        "id": "23345d065b25b516",
+        "type": "group",
+        "z": "532ded640d221b98",
+        "name": "Emotiv Frequency Band Powers",
+        "style": {
+            "label": true,
+            "stroke": "#EBA4C0",
+            "fill": "#EBA4C0",
+            "fill-opacity": "0.25",
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "f6a2822f6bb32972",
+            "612e10072c172836",
+            "07c65f44e58cb796",
+            "d807d5dee38fe972",
+            "029ce096c3aa7171",
+            "40e1891a2968604a"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 452,
+        "h": 322
+    },
+    {
+        "id": "c3cb24deda0c74f5",
+        "type": "group",
+        "z": "532ded640d221b98",
+        "name": "Storing Data",
+        "style": {
+            "stroke": "#ffdf7f",
+            "fill": "#ffdf7f",
+            "fill-opacity": "0.25",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "2e2f4dff9fee3669",
+            "0d98de19a7bc912a",
+            "b5b7acfa06fd132a",
+            "109b184fc9c07bc9",
+            "677d4483590db3ec",
+            "b0bb8c1036a2741a"
+        ],
+        "x": 494,
+        "y": 19,
+        "w": 512,
+        "h": 322
+    },
+    {
+        "id": "a0a4b4cd0ea79f59",
+        "type": "group",
+        "z": "532ded640d221b98",
+        "name": "Flask Server - Prediction",
+        "style": {
+            "label": true,
+            "stroke": "#E7E7AE",
+            "fill": "#E7E7AE",
+            "fill-opacity": "0.25",
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "838004158d8f58c4",
+            "ce28e374ee95b6b1",
+            "13f80ce380ee1f87"
+        ],
+        "x": 1034,
+        "y": 119,
+        "w": 372,
+        "h": 122
+    },
+    {
+        "id": "4018f4c828884f46",
+        "type": "group",
+        "z": "532ded640d221b98",
+        "name": "Motion Sensors Processing",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000",
+            "fill": "#ffC000",
+            "fill-opacity": "0.25",
+            "stroke": "#ffC000"
+        },
+        "nodes": [
+            "3c046f59373e2dea",
+            "834ea361d1576dec",
+            "c7eea6bd7cd84d88",
+            "212d3982e878645f",
+            "aaa46cf16abc6e49",
+            "ef596dfffdf5bb72",
+            "fa199037ac2c50eb",
+            "37319766fce5a132",
+            "8e8b21843f2c6e72"
+        ],
+        "x": 834,
+        "y": 359,
+        "w": 312,
+        "h": 322
+    },
+    {
+        "id": "ca97725123e6bb54",
+        "type": "group",
+        "z": "532ded640d221b98",
+        "name": "Motion Sensors",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "label-position": "n",
+            "stroke": "#EBA4C0",
+            "fill": "#EBA4C0",
+            "fill-opacity": "0.25"
+        },
+        "nodes": [
+            "7f7ade1f1cbdd872",
+            "04d67ba9451342b6",
+            "291f2e620a56b7eb",
+            "d254aca011280314"
+        ],
+        "x": 494,
+        "y": 419,
+        "w": 322,
+        "h": 202
+    },
+    {
+        "id": "9a15f7fa7185f590",
+        "type": "group",
+        "z": "532ded640d221b98",
+        "name": "Dashboard",
+        "style": {
+            "label": true,
+            "stroke": "#77C6CC",
+            "fill": "#77C6CC",
+            "fill-opacity": "0.25",
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "c33358094e63486c",
+            "17a796a008e5047a",
+            "c4ff2f28a4be56af",
+            "466e4b63821e6371",
+            "9e592ac0c7620ba1",
+            "971ffbe4634df473",
+            "5b69b17d7e40f455"
+        ],
+        "x": 1164,
+        "y": 419,
+        "w": 342,
+        "h": 162
+    },
+    {
+        "id": "7ccaff80c1e92082",
+        "type": "group",
+        "z": "532ded640d221b98",
+        "name": "Emotiv Profile",
+        "style": {
+            "fill-opacity": "0.25",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000",
+            "stroke": "#EBA4C0",
+            "fill": "#EBA4C0"
+        },
+        "nodes": [
+            "3af2f5f29daf9478"
+        ],
+        "x": 194,
+        "y": 479,
+        "w": 252,
+        "h": 82
+    },
+    {
         "id": "fea83661.1ab498",
         "type": "ui_group",
         "name": "Actions + Head tilt",
@@ -460,7 +636,7 @@
         "type": "ui_tab",
         "name": "Emotiv BCI to ROS",
         "icon": "dashboard",
-        "order": 1,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -566,6 +742,7 @@
         "type": "ui_tab",
         "name": "Test 2MC + neutral",
         "icon": "dashboard",
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
@@ -601,16 +778,6 @@
         "height": 1
     },
     {
-        "id": "9d8313dd26666256",
-        "type": "ui_group",
-        "name": "Group 1",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "e4d8a4e0.d94e68",
         "type": "ui_group",
         "name": "Training Data",
@@ -624,16 +791,36 @@
     {
         "id": "c01de816.1e4998",
         "type": "ui_tab",
-        "name": "Creating CSV file",
+        "name": "EEG Data Collection",
         "icon": "dashboard",
         "order": 1,
         "disabled": false,
         "hidden": false
     },
     {
-        "id": "a1c0db342247ee6d",
+        "id": "0a95d08837d8eb5c",
+        "type": "ui_tab",
+        "name": "Test Emotiv to Node-RED",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7d218229b41e443e",
+        "type": "ui_group",
+        "name": "Responses",
+        "tab": "0a95d08837d8eb5c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "95e892029045c0d3",
         "type": "ui_spacer",
-        "z": "e2f4ed605471f537",
+        "z": "5f0c638b67c035fd",
         "name": "spacer",
         "group": "e4d8a4e0.d94e68",
         "order": 2,
@@ -641,14 +828,34 @@
         "height": 1
     },
     {
-        "id": "eee6d7e029feb007",
+        "id": "c4b560499bd54e6d",
         "type": "ui_spacer",
-        "z": "e2f4ed605471f537",
+        "z": "5f0c638b67c035fd",
         "name": "spacer",
         "group": "e4d8a4e0.d94e68",
         "order": 4,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "428b4a40a666540b",
+        "type": "ui_tab",
+        "name": "ML Prediction",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "db4756eecff0eda5",
+        "type": "ui_group",
+        "name": "Action and Head Tilt",
+        "tab": "428b4a40a666540b",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "303f9d115b69dfed",
@@ -870,7 +1077,7 @@
         "id": "44c939c1.e4e3a8",
         "type": "ui_text",
         "z": "5f0c638b67c035fd",
-        "group": "",
+        "group": "7d218229b41e443e",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -878,6 +1085,11 @@
         "label": "Text Response",
         "format": "{{msg.text}}",
         "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 880,
         "y": 60,
         "wires": []
@@ -887,7 +1099,7 @@
         "type": "ui_audio",
         "z": "5f0c638b67c035fd",
         "name": "Voice Response",
-        "group": "cccbe731d0e3b55d",
+        "group": "7d218229b41e443e",
         "voice": "en-US",
         "always": "",
         "x": 880,
@@ -1307,6 +1519,617 @@
         "x": 790,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "ed836d86e66c3718",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "0f629cdf65d2a2b2",
+        "name": "Store Alpha Data",
+        "func": "flow.set('alphaData', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 60,
+        "wires": [
+            [
+                "968438a3e4cc9c17"
+            ]
+        ]
+    },
+    {
+        "id": "b5c2d5d67356b02f",
+        "type": "EMOTIV",
+        "z": "e2f4ed605471f537",
+        "g": "bfa6067a4a904d68",
+        "name": "EMOTIV",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "1db48cd5b9dd1cba",
+                "808b7cb05cf52995",
+                "6da3a98c8bb3f0f2",
+                "e187111a92f1b5b0",
+                "d19e46e1e9363aa6"
+            ]
+        ]
+    },
+    {
+        "id": "1db48cd5b9dd1cba",
+        "type": "Frequency-Band-Power",
+        "z": "e2f4ed605471f537",
+        "g": "bfa6067a4a904d68",
+        "name": "FBP",
+        "freq": "1",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 320,
+        "y": 60,
+        "wires": [
+            [
+                "ed836d86e66c3718"
+            ]
+        ]
+    },
+    {
+        "id": "808b7cb05cf52995",
+        "type": "Frequency-Band-Power",
+        "z": "e2f4ed605471f537",
+        "g": "bfa6067a4a904d68",
+        "name": "FBP",
+        "freq": "2",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "c3101725157a1c88"
+            ]
+        ]
+    },
+    {
+        "id": "6da3a98c8bb3f0f2",
+        "type": "Frequency-Band-Power",
+        "z": "e2f4ed605471f537",
+        "g": "bfa6067a4a904d68",
+        "name": "FBP",
+        "freq": "3",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 320,
+        "y": 180,
+        "wires": [
+            [
+                "16e510f34a1bf111"
+            ]
+        ]
+    },
+    {
+        "id": "e187111a92f1b5b0",
+        "type": "Frequency-Band-Power",
+        "z": "e2f4ed605471f537",
+        "g": "bfa6067a4a904d68",
+        "name": "FBP",
+        "freq": "4",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "06924b11d5b17e7a"
+            ]
+        ]
+    },
+    {
+        "id": "d19e46e1e9363aa6",
+        "type": "Frequency-Band-Power",
+        "z": "e2f4ed605471f537",
+        "g": "bfa6067a4a904d68",
+        "name": "FBP",
+        "freq": "0",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 320,
+        "y": 300,
+        "wires": [
+            [
+                "e52fb457e9d61cea"
+            ]
+        ]
+    },
+    {
+        "id": "c3101725157a1c88",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "0f629cdf65d2a2b2",
+        "name": "Store Beta Low Data",
+        "func": "flow.set('betaLowData', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 120,
+        "wires": [
+            [
+                "968438a3e4cc9c17"
+            ]
+        ]
+    },
+    {
+        "id": "16e510f34a1bf111",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "0f629cdf65d2a2b2",
+        "name": "Store Beta High Data",
+        "func": "flow.set('betaHighData', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "968438a3e4cc9c17"
+            ]
+        ]
+    },
+    {
+        "id": "06924b11d5b17e7a",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "0f629cdf65d2a2b2",
+        "name": "Store Gamma Data",
+        "func": "flow.set('gammaData', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 240,
+        "wires": [
+            [
+                "968438a3e4cc9c17"
+            ]
+        ]
+    },
+    {
+        "id": "e52fb457e9d61cea",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "0f629cdf65d2a2b2",
+        "name": "Store Theta Data",
+        "func": "flow.set('thetaData', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 300,
+        "wires": [
+            [
+                "968438a3e4cc9c17",
+                "9920e1798be8798a"
+            ]
+        ]
+    },
+    {
+        "id": "968438a3e4cc9c17",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "0f629cdf65d2a2b2",
+        "name": "Combine Frequencies",
+        "func": "// Retrieve stored data from flow context\nvar alphaData = flow.get('alphaData') || [];\nvar betaLowData = flow.get('betaLowData') || [];\nvar betaHighData = flow.get('betaHighData') || [];\nvar gammaData = flow.get('gammaData') || [];\nvar thetaData = flow.get('thetaData') || [];\nvar commandData = flow.get('command') || [];\n\n// Initialize transformedData to accumulate combined data\nvar transformedData = {};\n\n// Define labels for each frequency band\nvar labels = ['_alpha', '_beta_low', '_beta_high', '_gamma', '_theta'];\nvar dataArrays = [alphaData, betaLowData, betaHighData, gammaData, thetaData];\n\n// Combine data if all arrays have data\nif (alphaData.length > 0 && betaLowData.length > 0 && betaHighData.length > 0 && gammaData.length > 0 && thetaData.length > 0) {\n    if (commandData == 'neutral' || commandData == 'open' || commandData == 'close') {\n        for (var i = 0; i < labels.length; i++) {\n            var currentData = dataArrays[i];\n            for (var j = 0; j < currentData.length; j++) {\n                transformedData[j + labels[i]] = currentData[j];\n            }\n        }\n        transformedData['command'] = commandData;\n        msg.combined = transformedData;\n        \n        // Clear stored data\n        flow.set('alphaData', []);\n        flow.set('betaLowData', []);\n        flow.set('betaHighData', []);\n        flow.set('gammaData', []);\n        flow.set('thetaData', []);\n\n        return msg;\n    }\n    return null;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 180,
+        "wires": [
+            [
+                "294931d189a1ec07",
+                "36ee610b3258a5c7"
+            ]
+        ]
+    },
+    {
+        "id": "1981989bdcc201f2",
+        "type": "ui_switch",
+        "z": "e2f4ed605471f537",
+        "g": "96ba6ab731736ebc",
+        "name": "Recording Switch",
+        "label": "Recording",
+        "tooltip": "",
+        "group": "e4d8a4e0.d94e68",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 240,
+        "y": 460,
+        "wires": [
+            [
+                "e439d83741deda58"
+            ]
+        ]
+    },
+    {
+        "id": "49b949cccf90fc7b",
+        "type": "ui_dropdown",
+        "z": "e2f4ed605471f537",
+        "g": "96ba6ab731736ebc",
+        "name": "Mental command",
+        "label": "Mental command",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "e4d8a4e0.d94e68",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Neutral",
+                "value": "neutral",
+                "type": "str"
+            },
+            {
+                "label": "Open",
+                "value": "open",
+                "type": "str"
+            },
+            {
+                "label": "Close",
+                "value": "close",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "payload",
+        "topicType": "msg",
+        "className": "",
+        "x": 240,
+        "y": 400,
+        "wires": [
+            [
+                "567ea95ede562d2c"
+            ]
+        ]
+    },
+    {
+        "id": "294931d189a1ec07",
+        "type": "switch",
+        "z": "e2f4ed605471f537",
+        "g": "f2061261b933916f",
+        "name": "Switch Recording",
+        "property": "recording",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1130,
+        "y": 180,
+        "wires": [
+            [
+                "936b215ab6dfb719"
+            ]
+        ]
+    },
+    {
+        "id": "567ea95ede562d2c",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "0f629cdf65d2a2b2",
+        "name": "Store Mental Command",
+        "func": "flow.set('command', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e439d83741deda58",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "0f629cdf65d2a2b2",
+        "name": "Store Recording Data",
+        "func": "flow.set('recording', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "936b215ab6dfb719",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "05debabdd37c8894",
+        "name": "Prepare CSV Data",
+        "func": "// Extract the combined data\nconst combinedData = msg.combined;\n\n// Initialize row\nconst row = [];\n\n// Get the current timestamp\nconst timestamp = new Date().toISOString();\nrow.push(timestamp);\n\n// Add header and values for 14 data points for each frequency band\nconst bands = ['alpha', 'beta_low', 'beta_high', 'gamma', 'theta'];\nbands.forEach(band => {\n    for (let i = 0; i <= 13; i++) {\n        row.push(combinedData[`${i}_${band}`] || '');\n    }\n});\n\n// Add value for the command\nrow.push(combinedData['command'] || '');\n\n// Convert row to CSV format\nconst csvRow = row.join(',');\n\nmsg.payload = csvRow + '\\n';\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 180,
+        "wires": [
+            [
+                "d56ccffcbe6040c6",
+                "d44b22a5efb384dc"
+            ]
+        ]
+    },
+    {
+        "id": "651da4dd7228ce1c",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "0e1f7670d099f2a3",
+        "name": "Set File Not Exists",
+        "func": "flow.set('fileExists', false);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1810,
+        "y": 200,
+        "wires": [
+            [
+                "078bbc5596fd792b",
+                "5fa3999de3c0049b"
+            ]
+        ]
+    },
+    {
+        "id": "078bbc5596fd792b",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "6d9bafec0c7f886a",
+        "name": "Prepare CSV Headers",
+        "func": "// Initialize headers\nconst headers = ['timestamp'];\nconst bands = ['alpha', 'beta_low', 'beta_high', 'gamma', 'theta'];\nbands.forEach(band => {\n    for (let i = 0; i <= 13; i++) {\n        headers.push(`${band}_${i}`);\n    }\n});\nheaders.push('command');\n\n// CSV format\nconst cvsHeaders = headers.join(',');\n\nmsg.payload = cvsHeaders + '\\n';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2060,
+        "y": 200,
+        "wires": [
+            [
+                "d5d86b3c5e33be86"
+            ]
+        ]
+    },
+    {
+        "id": "d5d86b3c5e33be86",
+        "type": "file",
+        "z": "e2f4ed605471f537",
+        "g": "6d9bafec0c7f886a",
+        "name": "Write CSV File",
+        "filename": "C:\\Users\\Romain\\Desktop\\robots_after_dark\\src\\frequency_dataset.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 2260,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81481ef233088497",
+        "type": "file",
+        "z": "e2f4ed605471f537",
+        "g": "6d9bafec0c7f886a",
+        "name": "Write CSV File",
+        "filename": "C:\\Users\\Romain\\Desktop\\robots_after_dark\\src\\frequency_dataset.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 2040,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3be549fe307c80d",
+        "type": "function",
+        "z": "e2f4ed605471f537",
+        "g": "0e1f7670d099f2a3",
+        "name": "Set File Exists",
+        "func": "flow.set('fileExists', true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1800,
+        "y": 160,
+        "wires": [
+            [
+                "81481ef233088497",
+                "c5c10f1dd9a046aa"
+            ]
+        ]
+    },
+    {
+        "id": "5fa3999de3c0049b",
+        "type": "debug",
+        "z": "e2f4ed605471f537",
+        "g": "effaf9419984a627",
+        "name": "Debug Not Existing File",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2090,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d56ccffcbe6040c6",
+        "type": "debug",
+        "z": "e2f4ed605471f537",
+        "g": "effaf9419984a627",
+        "name": "Debug CVS",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1590,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c5c10f1dd9a046aa",
+        "type": "debug",
+        "z": "e2f4ed605471f537",
+        "g": "effaf9419984a627",
+        "name": "Debug Existing File",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2090,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9920e1798be8798a",
+        "type": "debug",
+        "z": "e2f4ed605471f537",
+        "g": "effaf9419984a627",
+        "name": "Debug Frequency - Store Data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "36ee610b3258a5c7",
+        "type": "debug",
+        "z": "e2f4ed605471f537",
+        "g": "effaf9419984a627",
+        "name": "Debug Data ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "combined",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d44b22a5efb384dc",
+        "type": "fs-ops-access",
+        "z": "e2f4ed605471f537",
+        "g": "0e1f7670d099f2a3",
+        "name": "Check File Exists",
+        "path": "C:\\Users\\Romain\\Desktop\\robots_after_dark\\src\\",
+        "pathType": "str",
+        "filename": "frequency_dataset.csv",
+        "filenameType": "str",
+        "read": true,
+        "write": true,
+        "throwerror": false,
+        "x": 1610,
+        "y": 180,
+        "wires": [
+            [
+                "d3be549fe307c80d"
+            ],
+            [
+                "651da4dd7228ce1c"
+            ]
+        ]
     },
     {
         "id": "774ce4d1f3e8a634",
@@ -2173,736 +2996,10 @@
         "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
     },
     {
-        "id": "ed836d86e66c3718",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "0f629cdf65d2a2b2",
-        "name": "Store Alpha Data",
-        "func": "flow.set('alphaData', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 60,
-        "wires": [
-            [
-                "968438a3e4cc9c17"
-            ]
-        ]
-    },
-    {
-        "id": "b5c2d5d67356b02f",
-        "type": "EMOTIV",
-        "z": "e2f4ed605471f537",
-        "g": "bfa6067a4a904d68",
-        "name": "EMOTIV",
-        "x": 100,
-        "y": 180,
-        "wires": [
-            [
-                "1db48cd5b9dd1cba",
-                "808b7cb05cf52995",
-                "6da3a98c8bb3f0f2",
-                "e187111a92f1b5b0",
-                "d19e46e1e9363aa6"
-            ]
-        ]
-    },
-    {
-        "id": "1db48cd5b9dd1cba",
-        "type": "Frequency-Band-Power",
-        "z": "e2f4ed605471f537",
-        "g": "bfa6067a4a904d68",
-        "name": "FBP",
-        "freq": "1",
-        "headset": "EPOC+",
-        "sensor": 0,
-        "x": 320,
-        "y": 60,
-        "wires": [
-            [
-                "ed836d86e66c3718"
-            ]
-        ]
-    },
-    {
-        "id": "808b7cb05cf52995",
-        "type": "Frequency-Band-Power",
-        "z": "e2f4ed605471f537",
-        "g": "bfa6067a4a904d68",
-        "name": "FBP",
-        "freq": "2",
-        "headset": "EPOC+",
-        "sensor": 0,
-        "x": 320,
-        "y": 120,
-        "wires": [
-            [
-                "c3101725157a1c88"
-            ]
-        ]
-    },
-    {
-        "id": "6da3a98c8bb3f0f2",
-        "type": "Frequency-Band-Power",
-        "z": "e2f4ed605471f537",
-        "g": "bfa6067a4a904d68",
-        "name": "FBP",
-        "freq": "3",
-        "headset": "EPOC+",
-        "sensor": 0,
-        "x": 320,
-        "y": 180,
-        "wires": [
-            [
-                "16e510f34a1bf111"
-            ]
-        ]
-    },
-    {
-        "id": "e187111a92f1b5b0",
-        "type": "Frequency-Band-Power",
-        "z": "e2f4ed605471f537",
-        "g": "bfa6067a4a904d68",
-        "name": "FBP",
-        "freq": "4",
-        "headset": "EPOC+",
-        "sensor": 0,
-        "x": 320,
-        "y": 240,
-        "wires": [
-            [
-                "06924b11d5b17e7a"
-            ]
-        ]
-    },
-    {
-        "id": "d19e46e1e9363aa6",
-        "type": "Frequency-Band-Power",
-        "z": "e2f4ed605471f537",
-        "g": "bfa6067a4a904d68",
-        "name": "FBP",
-        "freq": "0",
-        "headset": "EPOC+",
-        "sensor": 0,
-        "x": 320,
-        "y": 300,
-        "wires": [
-            [
-                "e52fb457e9d61cea"
-            ]
-        ]
-    },
-    {
-        "id": "c3101725157a1c88",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "0f629cdf65d2a2b2",
-        "name": "Store Beta Low Data",
-        "func": "flow.set('betaLowData', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 120,
-        "wires": [
-            [
-                "968438a3e4cc9c17"
-            ]
-        ]
-    },
-    {
-        "id": "16e510f34a1bf111",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "0f629cdf65d2a2b2",
-        "name": "Store Beta High Data",
-        "func": "flow.set('betaHighData', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 180,
-        "wires": [
-            [
-                "968438a3e4cc9c17"
-            ]
-        ]
-    },
-    {
-        "id": "06924b11d5b17e7a",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "0f629cdf65d2a2b2",
-        "name": "Store Gamma Data",
-        "func": "flow.set('gammaData', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 240,
-        "wires": [
-            [
-                "968438a3e4cc9c17"
-            ]
-        ]
-    },
-    {
-        "id": "e52fb457e9d61cea",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "0f629cdf65d2a2b2",
-        "name": "Store Theta Data",
-        "func": "flow.set('thetaData', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 300,
-        "wires": [
-            [
-                "968438a3e4cc9c17",
-                "9920e1798be8798a"
-            ]
-        ]
-    },
-    {
-        "id": "968438a3e4cc9c17",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "0f629cdf65d2a2b2",
-        "name": "Combine Frequencies",
-        "func": "// Retrieve stored data from flow context\nvar alphaData = flow.get('alphaData') || [];\nvar betaLowData = flow.get('betaLowData') || [];\nvar betaHighData = flow.get('betaHighData') || [];\nvar gammaData = flow.get('gammaData') || [];\nvar thetaData = flow.get('thetaData') || [];\nvar commandData = flow.get('command') || [];\n\n// Initialize transformedData to accumulate combined data\nvar transformedData = {};\n\n// Define labels for each frequency band\nvar labels = ['_alpha', '_beta_low', '_beta_high', '_gamma', '_theta'];\nvar dataArrays = [alphaData, betaLowData, betaHighData, gammaData, thetaData];\n\n// Combine data if all arrays have data\nif (alphaData.length > 0 && betaLowData.length > 0 && betaHighData.length > 0 && gammaData.length > 0 && thetaData.length > 0) {\n    if (commandData == 'neutral' || commandData == 'open' || commandData == 'close') {\n        for (var i = 0; i < labels.length; i++) {\n            var currentData = dataArrays[i];\n            for (var j = 0; j < currentData.length; j++) {\n                transformedData[j + labels[i]] = currentData[j];\n            }\n        }\n        transformedData['command'] = commandData;\n        msg.combined = transformedData;\n        \n        // Clear stored data\n        flow.set('alphaData', []);\n        flow.set('betaLowData', []);\n        flow.set('betaHighData', []);\n        flow.set('gammaData', []);\n        flow.set('thetaData', []);\n\n        return msg;\n    }\n    return null;\n}\nreturn null;\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 880,
-        "y": 180,
-        "wires": [
-            [
-                "294931d189a1ec07",
-                "36ee610b3258a5c7"
-            ]
-        ]
-    },
-    {
-        "id": "1981989bdcc201f2",
-        "type": "ui_switch",
-        "z": "e2f4ed605471f537",
-        "g": "96ba6ab731736ebc",
-        "name": "Recording Switch",
-        "label": "Recording",
-        "tooltip": "",
-        "group": "e4d8a4e0.d94e68",
-        "order": 3,
-        "width": 4,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": true,
-        "className": "",
-        "x": 240,
-        "y": 400,
-        "wires": [
-            [
-                "e439d83741deda58"
-            ]
-        ]
-    },
-    {
-        "id": "49b949cccf90fc7b",
-        "type": "ui_dropdown",
-        "z": "e2f4ed605471f537",
-        "g": "96ba6ab731736ebc",
-        "name": "Mental command",
-        "label": "Mental command",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "e4d8a4e0.d94e68",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Neutral",
-                "value": "neutral",
-                "type": "str"
-            },
-            {
-                "label": "Open",
-                "value": "open",
-                "type": "str"
-            },
-            {
-                "label": "Close",
-                "value": "close",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "payload",
-        "topicType": "msg",
-        "className": "",
-        "x": 240,
-        "y": 460,
-        "wires": [
-            [
-                "567ea95ede562d2c"
-            ]
-        ]
-    },
-    {
-        "id": "294931d189a1ec07",
-        "type": "switch",
-        "z": "e2f4ed605471f537",
-        "g": "f2061261b933916f",
-        "name": "Switch Recording",
-        "property": "recording",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "true",
-                "vt": "bool"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1130,
-        "y": 180,
-        "wires": [
-            [
-                "936b215ab6dfb719"
-            ]
-        ]
-    },
-    {
-        "id": "567ea95ede562d2c",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "0f629cdf65d2a2b2",
-        "name": "Store Mental Command",
-        "func": "flow.set('command', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e439d83741deda58",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "0f629cdf65d2a2b2",
-        "name": "Store Recording Data",
-        "func": "flow.set('recording', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "936b215ab6dfb719",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "05debabdd37c8894",
-        "name": "Prepare CSV Data",
-        "func": "// Extract the combined data\nconst combinedData = msg.combined;\n\n// Initialize row\nconst row = [];\n\n// Get the current timestamp\nconst timestamp = new Date().toISOString();\nrow.push(timestamp);\n\n// Add header and values for 14 data points for each frequency band\nconst bands = ['alpha', 'beta_low', 'beta_high', 'gamma', 'theta'];\nbands.forEach(band => {\n    for (let i = 0; i <= 13; i++) {\n        row.push(combinedData[`${i}_${band}`] || '');\n    }\n});\n\n// Add value for the command\nrow.push(combinedData['command'] || '');\n\n// Convert row to CSV format\nconst csvRow = row.join(',');\n\nmsg.payload = csvRow + '\\n';\n\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1370,
-        "y": 180,
-        "wires": [
-            [
-                "d56ccffcbe6040c6",
-                "d44b22a5efb384dc"
-            ]
-        ]
-    },
-    {
-        "id": "651da4dd7228ce1c",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "0e1f7670d099f2a3",
-        "name": "Set File Not Exists",
-        "func": "flow.set('fileExists', false);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1810,
-        "y": 200,
-        "wires": [
-            [
-                "078bbc5596fd792b",
-                "5fa3999de3c0049b"
-            ]
-        ]
-    },
-    {
-        "id": "078bbc5596fd792b",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "6d9bafec0c7f886a",
-        "name": "Prepare CSV Headers",
-        "func": "// Initialize headers\nconst headers = ['timestamp'];\nconst bands = ['alpha', 'beta_low', 'beta_high', 'gamma', 'theta'];\nbands.forEach(band => {\n    for (let i = 0; i <= 13; i++) {\n        headers.push(`${band}_${i}`);\n    }\n});\nheaders.push('command');\n\n// CSV format\nconst cvsHeaders = headers.join(',');\n\nmsg.payload = cvsHeaders + '\\n';\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2060,
-        "y": 200,
-        "wires": [
-            [
-                "d5d86b3c5e33be86"
-            ]
-        ]
-    },
-    {
-        "id": "d5d86b3c5e33be86",
-        "type": "file",
-        "z": "e2f4ed605471f537",
-        "g": "6d9bafec0c7f886a",
-        "name": "Write CSV File",
-        "filename": "C:\\Users\\Romain\\Desktop\\robots_after_dark\\src\\frequency_dataset.csv",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 2260,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "81481ef233088497",
-        "type": "file",
-        "z": "e2f4ed605471f537",
-        "g": "6d9bafec0c7f886a",
-        "name": "Write CSV File",
-        "filename": "C:\\Users\\Romain\\Desktop\\robots_after_dark\\src\\frequency_dataset.csv",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 2040,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d3be549fe307c80d",
-        "type": "function",
-        "z": "e2f4ed605471f537",
-        "g": "0e1f7670d099f2a3",
-        "name": "Set File Exists",
-        "func": "flow.set('fileExists', true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1800,
-        "y": 160,
-        "wires": [
-            [
-                "81481ef233088497",
-                "c5c10f1dd9a046aa"
-            ]
-        ]
-    },
-    {
-        "id": "5fa3999de3c0049b",
-        "type": "debug",
-        "z": "e2f4ed605471f537",
-        "g": "effaf9419984a627",
-        "name": "Debug Not Existing File",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2010,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "d56ccffcbe6040c6",
-        "type": "debug",
-        "z": "e2f4ed605471f537",
-        "g": "effaf9419984a627",
-        "name": "Debug CVS",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1530,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "c5c10f1dd9a046aa",
-        "type": "debug",
-        "z": "e2f4ed605471f537",
-        "g": "effaf9419984a627",
-        "name": "Debug Existing File",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2010,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "9920e1798be8798a",
-        "type": "debug",
-        "z": "e2f4ed605471f537",
-        "g": "effaf9419984a627",
-        "name": "Debug Frequency - Store Data",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "36ee610b3258a5c7",
-        "type": "debug",
-        "z": "e2f4ed605471f537",
-        "g": "effaf9419984a627",
-        "name": "Debug Data ",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "combined",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "d44b22a5efb384dc",
-        "type": "fs-ops-access",
-        "z": "e2f4ed605471f537",
-        "g": "0e1f7670d099f2a3",
-        "name": "Check File Exists",
-        "path": "C:\\Users\\Romain\\Desktop\\robots_after_dark\\src\\",
-        "pathType": "str",
-        "filename": "frequency_dataset.csv",
-        "filenameType": "str",
-        "read": true,
-        "write": true,
-        "throwerror": false,
-        "x": 1610,
-        "y": 180,
-        "wires": [
-            [
-                "d3be549fe307c80d"
-            ],
-            [
-                "651da4dd7228ce1c"
-            ]
-        ]
-    },
-    {
-        "id": "26f22f29cc9a86ab",
-        "type": "EMOTIV",
-        "z": "532ded640d221b98",
-        "name": "EMOTIV",
-        "x": 100,
-        "y": 180,
-        "wires": [
-            [
-                "024870c68242e835",
-                "2ac96d86735a5a33",
-                "fe2224e14abafcde",
-                "0ab6c2c44bac23a7",
-                "19c89d73c419d27f"
-            ]
-        ]
-    },
-    {
-        "id": "024870c68242e835",
-        "type": "Frequency-Band-Power",
-        "z": "532ded640d221b98",
-        "name": "FBP",
-        "freq": "1",
-        "headset": "EPOC+",
-        "sensor": 0,
-        "x": 320,
-        "y": 60,
-        "wires": [
-            [
-                "cd1058508a572ae0"
-            ]
-        ]
-    },
-    {
-        "id": "2ac96d86735a5a33",
-        "type": "Frequency-Band-Power",
-        "z": "532ded640d221b98",
-        "name": "FBP",
-        "freq": "2",
-        "headset": "EPOC+",
-        "sensor": 0,
-        "x": 320,
-        "y": 120,
-        "wires": [
-            [
-                "cd1058508a572ae0"
-            ]
-        ]
-    },
-    {
-        "id": "fe2224e14abafcde",
-        "type": "Frequency-Band-Power",
-        "z": "532ded640d221b98",
-        "name": "FBP",
-        "freq": "3",
-        "headset": "EPOC+",
-        "sensor": 0,
-        "x": 320,
-        "y": 180,
-        "wires": [
-            [
-                "cd1058508a572ae0"
-            ]
-        ]
-    },
-    {
-        "id": "0ab6c2c44bac23a7",
-        "type": "Frequency-Band-Power",
-        "z": "532ded640d221b98",
-        "name": "FBP",
-        "freq": "4",
-        "headset": "EPOC+",
-        "sensor": 0,
-        "x": 320,
-        "y": 240,
-        "wires": [
-            [
-                "cd1058508a572ae0"
-            ]
-        ]
-    },
-    {
-        "id": "19c89d73c419d27f",
-        "type": "Frequency-Band-Power",
-        "z": "532ded640d221b98",
-        "name": "FBP",
-        "freq": "0",
-        "headset": "EPOC+",
-        "sensor": 0,
-        "x": 320,
-        "y": 300,
-        "wires": [
-            [
-                "cd1058508a572ae0"
-            ]
-        ]
-    },
-    {
-        "id": "cd1058508a572ae0",
-        "type": "function",
-        "z": "532ded640d221b98",
-        "name": "Combine Frequencies",
-        "func": "var alpha = flow.get('alpha') || 0;\nvar beta_low = flow.get('beta_low') || 0;\nvar beta_high = flow.get('beta_high') || 0;\nvar gamma = flow.get('gamma') || 0;\nvar theta = flow.get('theta') || 0;\n\nif (msg.topic === 'Alpha') {\n    alpha = msg.payload;\n    flow.set('alpha', alpha);\n}\nelse if (msg.topic === 'Beta Low') {\n    beta_low = msg.payload;\n    flow.set('beta_low', beta_low);\n}\nelse if (msg.topic === 'Beta High') {\n    beta_high = msg.payload;\n    flow.set('beta_high', beta_high);\n}\nelse if (msg.topic === 'Gamma') {\n    gamma = msg.payload;\n    flow.set('gamma', gamma);\n}\nelse if (msg.topic === 'Theta') {\n    theta = msg.payload;\n    flow.set('theta', theta);\n}\n\n// Combine all frequency bands into one message\nif (alpha && beta_low && beta_high && gamma && theta) {\n    var combined = {\n        alpha: alpha,\n        beta_low: beta_low,\n        beta_high: beta_high,\n        gamma: gamma,\n        theta: theta\n    };\n    msg.payload = combined;\n    return [msg];\n}\nreturn null;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 180,
-        "wires": [
-            [
-                "838004158d8f58c4"
-            ]
-        ]
-    },
-    {
         "id": "838004158d8f58c4",
         "type": "http request",
         "z": "532ded640d221b98",
+        "g": "a0a4b4cd0ea79f59",
         "name": "Send to Flask",
         "method": "POST",
         "ret": "obj",
@@ -2915,11 +3012,12 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 780,
+        "x": 1140,
         "y": 180,
         "wires": [
             [
-                "ce28e374ee95b6b1"
+                "ce28e374ee95b6b1",
+                "13f80ce380ee1f87"
             ]
         ]
     },
@@ -2927,6 +3025,7 @@
         "id": "ce28e374ee95b6b1",
         "type": "debug",
         "z": "532ded640d221b98",
+        "g": "a0a4b4cd0ea79f59",
         "name": "Prediction",
         "active": true,
         "tosidebar": true,
@@ -2936,8 +3035,662 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 180,
+        "x": 1300,
+        "y": 160,
         "wires": []
+    },
+    {
+        "id": "2e2f4dff9fee3669",
+        "type": "function",
+        "z": "532ded640d221b98",
+        "g": "c3cb24deda0c74f5",
+        "name": "Store Alpha Data",
+        "func": "flow.set('alphaData', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 60,
+        "wires": [
+            [
+                "b0bb8c1036a2741a"
+            ]
+        ]
+    },
+    {
+        "id": "f6a2822f6bb32972",
+        "type": "EMOTIV",
+        "z": "532ded640d221b98",
+        "g": "23345d065b25b516",
+        "name": "EMOTIV",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "612e10072c172836",
+                "07c65f44e58cb796",
+                "d807d5dee38fe972",
+                "029ce096c3aa7171",
+                "40e1891a2968604a",
+                "3af2f5f29daf9478"
+            ]
+        ]
+    },
+    {
+        "id": "612e10072c172836",
+        "type": "Frequency-Band-Power",
+        "z": "532ded640d221b98",
+        "g": "23345d065b25b516",
+        "name": "FBP",
+        "freq": "1",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 320,
+        "y": 60,
+        "wires": [
+            [
+                "2e2f4dff9fee3669"
+            ]
+        ]
+    },
+    {
+        "id": "07c65f44e58cb796",
+        "type": "Frequency-Band-Power",
+        "z": "532ded640d221b98",
+        "g": "23345d065b25b516",
+        "name": "FBP",
+        "freq": "2",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "0d98de19a7bc912a"
+            ]
+        ]
+    },
+    {
+        "id": "d807d5dee38fe972",
+        "type": "Frequency-Band-Power",
+        "z": "532ded640d221b98",
+        "g": "23345d065b25b516",
+        "name": "FBP",
+        "freq": "3",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 320,
+        "y": 180,
+        "wires": [
+            [
+                "b5b7acfa06fd132a"
+            ]
+        ]
+    },
+    {
+        "id": "029ce096c3aa7171",
+        "type": "Frequency-Band-Power",
+        "z": "532ded640d221b98",
+        "g": "23345d065b25b516",
+        "name": "FBP",
+        "freq": "4",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "109b184fc9c07bc9"
+            ]
+        ]
+    },
+    {
+        "id": "40e1891a2968604a",
+        "type": "Frequency-Band-Power",
+        "z": "532ded640d221b98",
+        "g": "23345d065b25b516",
+        "name": "FBP",
+        "freq": "0",
+        "headset": "EPOC+",
+        "sensor": 0,
+        "x": 320,
+        "y": 300,
+        "wires": [
+            [
+                "677d4483590db3ec"
+            ]
+        ]
+    },
+    {
+        "id": "0d98de19a7bc912a",
+        "type": "function",
+        "z": "532ded640d221b98",
+        "g": "c3cb24deda0c74f5",
+        "name": "Store Beta Low Data",
+        "func": "flow.set('betaLowData', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 120,
+        "wires": [
+            [
+                "b0bb8c1036a2741a"
+            ]
+        ]
+    },
+    {
+        "id": "b5b7acfa06fd132a",
+        "type": "function",
+        "z": "532ded640d221b98",
+        "g": "c3cb24deda0c74f5",
+        "name": "Store Beta High Data",
+        "func": "flow.set('betaHighData', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "b0bb8c1036a2741a"
+            ]
+        ]
+    },
+    {
+        "id": "109b184fc9c07bc9",
+        "type": "function",
+        "z": "532ded640d221b98",
+        "g": "c3cb24deda0c74f5",
+        "name": "Store Gamma Data",
+        "func": "flow.set('gammaData', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 240,
+        "wires": [
+            [
+                "b0bb8c1036a2741a"
+            ]
+        ]
+    },
+    {
+        "id": "677d4483590db3ec",
+        "type": "function",
+        "z": "532ded640d221b98",
+        "g": "c3cb24deda0c74f5",
+        "name": "Store Theta Data",
+        "func": "flow.set('thetaData', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 300,
+        "wires": [
+            [
+                "b0bb8c1036a2741a"
+            ]
+        ]
+    },
+    {
+        "id": "b0bb8c1036a2741a",
+        "type": "function",
+        "z": "532ded640d221b98",
+        "g": "c3cb24deda0c74f5",
+        "name": "Combine Frequencies",
+        "func": "// Retrieve stored data from flow context\nvar alphaData = flow.get('alphaData') || [];\nvar betaLowData = flow.get('betaLowData') || [];\nvar betaHighData = flow.get('betaHighData') || [];\nvar gammaData = flow.get('gammaData') || [];\nvar thetaData = flow.get('thetaData') || [];\nvar commandData = flow.get('command') || [];\n\n// Initialize transformedData to accumulate combined data\nvar transformedData = {};\n\n// Define labels for each frequency band\nvar labels = ['_alpha', '_beta_low', '_beta_high', '_gamma', '_theta'];\nvar dataArrays = [alphaData, betaLowData, betaHighData, gammaData, thetaData];\n\n// Combine data if all arrays have data\nif (alphaData.length > 0 && betaLowData.length > 0 && betaHighData.length > 0 && gammaData.length > 0 && thetaData.length > 0) {\n    if (commandData == 'neutral' || commandData == 'open' || commandData == 'close') {\n        for (var i = 0; i < labels.length; i++) {\n            var currentData = dataArrays[i];\n            for (var j = 0; j < currentData.length; j++) {\n                transformedData[j + labels[i]] = currentData[j];\n            }\n        }\n        transformedData['command'] = commandData;\n        msg.combined = transformedData;\n        \n        // Clear stored data\n        flow.set('alphaData', []);\n        flow.set('betaLowData', []);\n        flow.set('betaHighData', []);\n        flow.set('gammaData', []);\n        flow.set('thetaData', []);\n\n        return msg;\n    }\n    return null;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 180,
+        "wires": [
+            [
+                "838004158d8f58c4"
+            ]
+        ]
+    },
+    {
+        "id": "3c046f59373e2dea",
+        "type": "function",
+        "z": "532ded640d221b98",
+        "g": "4018f4c828884f46",
+        "name": "accX",
+        "func": "msg.payload = {\n    accX: msg.payload,\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 420,
+        "wires": [
+            [
+                "aaa46cf16abc6e49",
+                "212d3982e878645f"
+            ]
+        ]
+    },
+    {
+        "id": "834ea361d1576dec",
+        "type": "function",
+        "z": "532ded640d221b98",
+        "g": "4018f4c828884f46",
+        "name": "accY",
+        "func": "msg.payload = {\n    accY: msg.payload,\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 520,
+        "wires": [
+            [
+                "fa199037ac2c50eb",
+                "ef596dfffdf5bb72"
+            ]
+        ]
+    },
+    {
+        "id": "c7eea6bd7cd84d88",
+        "type": "function",
+        "z": "532ded640d221b98",
+        "g": "4018f4c828884f46",
+        "name": "accZ",
+        "func": "msg.payload = {\n    accZ: msg.payload,\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 620,
+        "wires": [
+            [
+                "37319766fce5a132",
+                "8e8b21843f2c6e72"
+            ]
+        ]
+    },
+    {
+        "id": "212d3982e878645f",
+        "type": "http request",
+        "z": "532ded640d221b98",
+        "g": "4018f4c828884f46",
+        "name": "Send accX",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://172.20.237.203:5014/emotiv/acceleration/x",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1050,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aaa46cf16abc6e49",
+        "type": "debug",
+        "z": "532ded640d221b98",
+        "g": "4018f4c828884f46",
+        "name": "accX",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ef596dfffdf5bb72",
+        "type": "http request",
+        "z": "532ded640d221b98",
+        "g": "4018f4c828884f46",
+        "name": "Send accY",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://172.20.237.203:5014/emotiv/acceleration/y",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1050,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa199037ac2c50eb",
+        "type": "debug",
+        "z": "532ded640d221b98",
+        "g": "4018f4c828884f46",
+        "name": "accY",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "37319766fce5a132",
+        "type": "debug",
+        "z": "532ded640d221b98",
+        "g": "4018f4c828884f46",
+        "name": "accZ",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "8e8b21843f2c6e72",
+        "type": "http request",
+        "z": "532ded640d221b98",
+        "g": "4018f4c828884f46",
+        "name": "Send accZ",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://172.20.237.203:5014/emotiv/acceleration/z",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1050,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f7ade1f1cbdd872",
+        "type": "Motion-Sensor",
+        "z": "532ded640d221b98",
+        "g": "ca97725123e6bb54",
+        "name": "MS",
+        "metric": "3",
+        "x": 630,
+        "y": 460,
+        "wires": [
+            [
+                "3c046f59373e2dea"
+            ]
+        ]
+    },
+    {
+        "id": "04d67ba9451342b6",
+        "type": "Motion-Sensor",
+        "z": "532ded640d221b98",
+        "g": "ca97725123e6bb54",
+        "name": "MS",
+        "metric": "4",
+        "x": 630,
+        "y": 520,
+        "wires": [
+            [
+                "834ea361d1576dec",
+                "d254aca011280314"
+            ]
+        ]
+    },
+    {
+        "id": "291f2e620a56b7eb",
+        "type": "Motion-Sensor",
+        "z": "532ded640d221b98",
+        "g": "ca97725123e6bb54",
+        "name": "MS",
+        "metric": "5",
+        "x": 630,
+        "y": 580,
+        "wires": [
+            [
+                "c7eea6bd7cd84d88"
+            ]
+        ]
+    },
+    {
+        "id": "d254aca011280314",
+        "type": "link out",
+        "z": "532ded640d221b98",
+        "g": "ca97725123e6bb54",
+        "name": "magY",
+        "mode": "link",
+        "links": [
+            "c33358094e63486c",
+            "9e592ac0c7620ba1"
+        ],
+        "x": 775,
+        "y": 520,
+        "wires": [],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "c33358094e63486c",
+        "type": "link in",
+        "z": "532ded640d221b98",
+        "g": "9a15f7fa7185f590",
+        "name": "magY",
+        "links": [
+            "d254aca011280314"
+        ],
+        "x": 1205,
+        "y": 500,
+        "wires": [
+            [
+                "17a796a008e5047a"
+            ]
+        ],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "17a796a008e5047a",
+        "type": "function",
+        "z": "532ded640d221b98",
+        "g": "9a15f7fa7185f590",
+        "name": "Tilt",
+        "func": "let accY = msg.payload;\n\nlet tilt = \"center\";\n\nif (accY < 7500) {\n    tilt = \"left\";\n} else if (accY > 8500) {\n    tilt = \"right\";\n}\n\nmsg.payload = tilt;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 500,
+        "wires": [
+            [
+                "c4ff2f28a4be56af"
+            ]
+        ]
+    },
+    {
+        "id": "c4ff2f28a4be56af",
+        "type": "ui_text",
+        "z": "532ded640d221b98",
+        "g": "9a15f7fa7185f590",
+        "group": "db4756eecff0eda5",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "name": "",
+        "label": "Head tilt",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1420,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "466e4b63821e6371",
+        "type": "ui_text",
+        "z": "532ded640d221b98",
+        "g": "9a15f7fa7185f590",
+        "group": "db4756eecff0eda5",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "name": "",
+        "label": "value",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1410,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "9e592ac0c7620ba1",
+        "type": "link in",
+        "z": "532ded640d221b98",
+        "g": "9a15f7fa7185f590",
+        "name": "magY",
+        "links": [
+            "d254aca011280314"
+        ],
+        "x": 1205,
+        "y": 540,
+        "wires": [
+            [
+                "466e4b63821e6371"
+            ]
+        ],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "971ffbe4634df473",
+        "type": "ui_text",
+        "z": "532ded640d221b98",
+        "g": "9a15f7fa7185f590",
+        "group": "db4756eecff0eda5",
+        "order": 1,
+        "width": 2,
+        "height": 1,
+        "name": "",
+        "label": "Prediction",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1420,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5b69b17d7e40f455",
+        "type": "link in",
+        "z": "532ded640d221b98",
+        "g": "9a15f7fa7185f590",
+        "name": "Prediction",
+        "links": [
+            "13f80ce380ee1f87"
+        ],
+        "x": 1205,
+        "y": 460,
+        "wires": [
+            [
+                "971ffbe4634df473"
+            ]
+        ],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "13f80ce380ee1f87",
+        "type": "link out",
+        "z": "532ded640d221b98",
+        "g": "a0a4b4cd0ea79f59",
+        "name": "Prediction",
+        "mode": "link",
+        "links": [
+            "5b69b17d7e40f455"
+        ],
+        "x": 1255,
+        "y": 200,
+        "wires": [],
+        "icon": "node-red-contrib-emotiv-bci/ic-mental-commands.png"
+    },
+    {
+        "id": "3af2f5f29daf9478",
+        "type": "Profile-Name",
+        "z": "532ded640d221b98",
+        "g": "7ccaff80c1e92082",
+        "name": "Profile",
+        "profileName": "gripper control",
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "7f7ade1f1cbdd872",
+                "04d67ba9451342b6",
+                "291f2e620a56b7eb"
+            ]
+        ]
     }
 ]
