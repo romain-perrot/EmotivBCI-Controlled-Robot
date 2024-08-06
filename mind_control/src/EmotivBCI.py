@@ -161,6 +161,7 @@ def log_result(initial_timestamp, end_timestamp, duration, action_tilt):
 
 @app.route('/emotiv/neutral', methods=['POST'])
 def handle_neutral_state():
+    print('In neutral state, awaiting commands')
     return 'In neutral state, awaiting commands'
 
 @app.route('/emotiv/gripper/open', methods=['POST'])
