@@ -14,7 +14,7 @@ This project focuses on developing a BCI-controlled robotic assistant using the 
 
 ## Project Structure
 
-- `mind_control/`: Contains the source code for controlling the TIAGo++ robot.
+- `mind_control/`: Contains the source code for controlling the TIAGo++ robot using either the EmotivBCI machine learning model or a logistic regression model (both have to be trained with your mental images).
 - `flows.json`: Node-RED flow configuration file.
 
 <p align="center">
